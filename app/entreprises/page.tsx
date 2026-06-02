@@ -9,11 +9,10 @@ import {
 import { PageHeader } from "@/components/page-header";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/reveal";
-import { OfferCard } from "@/components/offer-card";
+import { OffersGrid } from "@/components/offers-grid";
 import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/cta";
 import { StepsSection } from "@/components/sections/steps";
-import { offersByAudience } from "@/lib/offers";
 import { sectorUseCases } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -50,8 +49,6 @@ const benefits = [
 ];
 
 export default function EntreprisesPage() {
-  const offers = offersByAudience("entreprises");
-
   return (
     <>
       <PageHeader
@@ -170,13 +167,12 @@ export default function EntreprisesPage() {
       {/* Offres */}
       <Section id="offres" className="bg-white/[0.02]">
         <SectionHeading
-          eyebrow="Nos offres entreprises"
-          title="Choisissez le format adapté à vos équipes"
+          eyebrow="Nos formules"
+          title="Un parcours adapté à vos équipes"
+          subtitle="De l'essai sans risque à l'accompagnement durable, finançable OPCO."
         />
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {offers.map((offer) => (
-            <OfferCard key={offer.id} offer={offer} />
-          ))}
+        <div className="mt-16">
+          <OffersGrid />
         </div>
       </Section>
 

@@ -4,7 +4,7 @@ import { ReasonsSection } from "@/components/sections/reasons";
 import { StepsSection } from "@/components/sections/steps";
 import { FaqSection } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/cta";
-import { AudienceOffers } from "@/components/audience-offers";
+import { OffersGrid } from "@/components/offers-grid";
 import { Section, SectionHeading } from "@/components/ui/section";
 
 export default function HomePage() {
@@ -15,15 +15,15 @@ export default function HomePage() {
       <ReasonsSection />
       <StepsSection />
 
-      {/* Offres pilotées par le sélecteur de public */}
+      {/* Offres structurées selon le parcours commercial */}
       <Section id="offres">
         <SectionHeading
-          eyebrow="Nos formations"
-          title="Des offres claires, pour chaque besoin"
-          subtitle="Choisissez votre profil pour découvrir les formules adaptées."
+          eyebrow="Nos formules"
+          title="Un parcours pensé pour vous, étape par étape"
+          subtitle="De la découverte sans risque à la relation durable : choisissez la formule qui vous correspond."
         />
-        <div className="mt-12">
-          <AudienceOffers />
+        <div className="mt-16">
+          <OffersGrid />
         </div>
       </Section>
 

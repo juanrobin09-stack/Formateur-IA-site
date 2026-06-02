@@ -5,10 +5,11 @@ import type { Offer } from "@/lib/offers";
 
 /** Détermine la destination du CTA selon le type d'offre. */
 function ctaHref(offer: Offer): string {
-  // Audit gratuit et sur-mesure → contact / devis
-  if (offer.price === "Offert" || offer.price === "Sur devis") return "/contact";
-  // Les autres offres → prise de rendez-vous (sans paiement)
-  return `/reservation?offer=${offer.id}`;
+  // L'échantillon (prix fixe en €) passe par la prise de rendez-vous ;
+  // toutes les autres formules passent par le contact / devis.
+  return offer.price.includes("€")
+    ? `/reservation?offer=${offer.id}`
+    : "/contact";
 }
 
 /** Carte d'offre réutilisable (tarifs, accueil, pages publics). */

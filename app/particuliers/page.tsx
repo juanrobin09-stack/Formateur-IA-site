@@ -3,18 +3,17 @@ import { ArrowRight, Video, Clock, Heart } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/reveal";
-import { OfferCard } from "@/components/offer-card";
+import { OffersGrid } from "@/components/offers-grid";
 import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/cta";
 import { FaqSection } from "@/components/sections/faq";
 import { TestimonialsSection } from "@/components/sections/testimonials";
-import { offersByAudience } from "@/lib/offers";
 import { individualProfiles } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Formations IA pour particuliers",
   description:
-    "Apprenez à utiliser l'IA, sans connaissances techniques. Ateliers collectifs en ligne, cours particuliers en visio et Pack Autonomie IA. Pour indépendants, salariés, demandeurs d'emploi et curieux.",
+    "Apprenez à utiliser l'IA, sans connaissances techniques. Commencez par un essai gratuit, puis la formule qui vous convient. Pour indépendants, salariés, demandeurs d'emploi et curieux.",
 };
 
 const formats = [
@@ -36,8 +35,6 @@ const formats = [
 ];
 
 export default function ParticuliersPage() {
-  const offers = offersByAudience("particuliers");
-
   return (
     <>
       <PageHeader
@@ -112,13 +109,12 @@ export default function ParticuliersPage() {
       {/* Offres */}
       <Section id="offres">
         <SectionHeading
-          eyebrow="Nos offres particuliers"
-          title="Choisissez votre formule"
+          eyebrow="Nos formules"
+          title="Commencez sans risque, à votre rythme"
+          subtitle="Un essai gratuit pour découvrir, puis la formule qui vous convient."
         />
-        <div className="mx-auto mt-16 grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {offers.map((offer) => (
-            <OfferCard key={offer.id} offer={offer} />
-          ))}
+        <div className="mt-16">
+          <OffersGrid />
         </div>
       </Section>
 

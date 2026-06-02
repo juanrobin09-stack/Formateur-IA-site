@@ -116,9 +116,9 @@ export const faq: FaqItem[] = [
       "Les formations en entreprise sont potentiellement finançables via votre OPCO, selon votre éligibilité. Nous fournissons un devis et les documents nécessaires.",
   },
   {
-    question: "Combien de temps dure une formation ?",
+    question: "Comment se déroule l'accompagnement ?",
     answer:
-      "De la demi-journée (Atelier Découverte) à 2 jours + 1 mois de suivi (Programme Transformation). Les formats particuliers vont de 1 h à 5 h.",
+      "On commence toujours par une phase de découverte (essai gratuit ou échantillon de 7 à 14 jours) pour valider la qualité sans risque. Vous choisissez ensuite un contrat sans engagement (30 jours) ou avec engagement (6 à 12 mois), selon votre rythme.",
   },
   {
     question: "Sur quels outils formez-vous ?",
@@ -131,9 +131,9 @@ export const faq: FaqItem[] = [
       "Oui. Nous concevons des programmes intra-entreprise entièrement adaptés à vos équipes, vos outils et vos objectifs. Demandez un devis.",
   },
   {
-    question: "Et pour les particuliers ?",
+    question: "Et si je veux juste tester d'abord ?",
     answer:
-      "Nous proposons des ateliers collectifs en ligne, des cours particuliers en visio et un Pack Autonomie IA pour devenir vraiment autonome à votre rythme.",
+      "C'est exactement l'idée de la phase Découverte : un essai gratuit ou un échantillon à petit prix (7 à 14 jours) pour vous faire une idée concrète, sans engagement, avant de vous décider.",
   },
 ];
 
