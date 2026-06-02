@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-white antialiased;
+    background-image:
+      radial-gradient(60rem 60rem at 80% -10%, rgba(37, 99, 235, 0.18), transparent 60%),
+      radial-gradient(50rem 50rem at -10% 10%, rgba(37, 99, 235, 0.10), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-brand-600/40 text-white;
+  }
+
+  /* Focus visible accessible et homogène */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-400 ring-offset-2 ring-offset-ink;
+  }
+}
+
+@layer components {
+  /* Conteneur centré standard */
+  .container-page {
+    @apply mx-auto w-full max-w-container px-6 sm:px-8;
+  }
+
+  /* Dégradé de texte signature */
+  .text-gradient {
+    @apply bg-gradient-to-br from-white via-white to-brand-300 bg-clip-text text-transparent;
+  }
+
+  /* Bordure « verre » subtile pour les cartes */
+  .glass {
+    @apply border border-white/10 bg-white/[0.03] backdrop-blur-sm;
+  }
+
+  /* Lien souligné animé */
+  .link-underline {
+    @apply relative after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-brand-400 after:transition-all hover:after:w-full;
+  }
+}
+
+/* Grille décorative en arrière-plan */
+.bg-grid {
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 60%, transparent 100%);
+}
