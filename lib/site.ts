@@ -2,8 +2,8 @@
  * Configuration globale de la marque Académie IA.
  * Centralise le contenu réutilisé dans tout le site (nom, slogan, coordonnées…).
  *
- * Les données personnelles sont volontairement laissées en [À REMPLACER]
- * ou pointent vers des valeurs fournies par l'utilisateur.
+ * Les informations personnelles (téléphone, SIRET…) sont configurables ici
+ * et/ou via les variables d'environnement.
  */
 
 export const site = {
@@ -13,21 +13,20 @@ export const site = {
     "Passez de « l'IA c'est flou » à « je l'utilise dès demain ». Des formations 100 % personnalisées à votre métier.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://academie-ia.fr",
 
-  // --- Coordonnées (fournies / à compléter) ---------------------------------
+  // --- Coordonnées ----------------------------------------------------------
   contact: {
     email: "juanrobin89@gmail.com",
     phone: "06.24.95.63.08",
     phoneHref: "+33624956308",
-    city: "[À REMPLACER : ville]",
-    linkedin: "[À REMPLACER : URL LinkedIn]",
+    area: "France · présentiel & distanciel",
+    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "",
   },
 
-  // --- Données légales (à compléter avant mise en ligne) --------------------
+  // --- Données légales ------------------------------------------------------
   legal: {
-    company: "[À REMPLACER : raison sociale]",
-    siret: "[À REMPLACER : SIRET]",
-    address: "[À REMPLACER : adresse complète]",
-    director: "[À REMPLACER : nom du responsable de publication]",
+    company: "Académie IA",
+    siret: process.env.NEXT_PUBLIC_SIRET || "",
+    address: process.env.NEXT_PUBLIC_ADDRESS || "",
     host: "Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA",
   },
 } as const;

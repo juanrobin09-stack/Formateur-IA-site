@@ -15,26 +15,28 @@ export default function MentionsLegalesPage() {
       <PageHeader title="Mentions légales" />
       <Section>
         <div className="mx-auto max-w-3xl space-y-8 text-white/70">
-          <p className="text-sm text-white/40">
-            Gabarit fourni à titre indicatif. À faire valider et compléter avec
-            vos informations réelles avant la mise en ligne.
-          </p>
-
           <div>
             <h2 className="font-display text-xl font-semibold text-white">
               Éditeur du site
             </h2>
             <p className="mt-3 text-sm leading-relaxed">
-              Le site {site.name} est édité par {site.legal.company}.<br />
-              Adresse : {site.legal.address}
-              <br />
-              SIRET : {site.legal.siret}
+              Le site {site.name} est édité par {site.legal.company}.
+              {site.legal.address && (
+                <>
+                  <br />
+                  Adresse : {site.legal.address}
+                </>
+              )}
+              {site.legal.siret && (
+                <>
+                  <br />
+                  SIRET : {site.legal.siret}
+                </>
+              )}
               <br />
               Email : {site.contact.email}
               <br />
               Téléphone : {site.contact.phone}
-              <br />
-              Responsable de la publication : {site.legal.director}
             </p>
           </div>
 

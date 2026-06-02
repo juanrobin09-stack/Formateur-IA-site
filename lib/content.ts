@@ -1,8 +1,6 @@
 /**
- * Contenu éditorial réutilisable : chiffres clés, témoignages, FAQ,
- * étapes, raisons de choisir Académie IA, cas d'usage par secteur.
- *
- * Les éléments de preuve sociale sont balisés [À REMPLACER].
+ * Contenu éditorial réutilisable : témoignages, FAQ, étapes,
+ * raisons de choisir Académie IA, cas d'usage par secteur.
  */
 
 import {

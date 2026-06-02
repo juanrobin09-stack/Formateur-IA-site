@@ -4,6 +4,7 @@ import { PageHeader } from "@/components/page-header";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/reveal";
 import { ButtonLink } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 import { FinalCta } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
@@ -42,40 +43,55 @@ export default function AProposPage() {
         subtitle="Académie IA démocratise l'intelligence artificielle auprès des entreprises et des particuliers, avec une approche concrète et sans jargon."
       />
 
-      {/* Le formateur */}
+      {/* Notre approche */}
       <Section>
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-brand-600/20 to-white/[0.02]">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand-600/20 font-display text-4xl font-bold text-brand-300">
-                    A
-                  </div>
-                  <p className="mt-4 text-sm text-white/40">
-                    [À REMPLACER : photo du formateur]
-                  </p>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-brand-600/25 via-accent-600/10 to-white/[0.02]">
+              <div
+                className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-accent-500/30 blur-3xl"
+                aria-hidden
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 p-8 text-center">
+                <Logo className="scale-150" />
+                <p className="max-w-xs text-sm leading-relaxed text-white/60">
+                  Un accompagnement humain, des résultats concrets. On forme,
+                  on outille, on rend autonome.
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-2">
+                  {["Pédagogue", "Sur-mesure", "Sans jargon"].map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70"
+                    >
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <p className="text-sm font-medium uppercase tracking-widest text-brand-400">
-              Le formateur
-            </p>
-            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-4xl">
-              [À REMPLACER : Prénom Nom]
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
+              Notre approche
+            </span>
+            <h2 className="mt-1 font-display text-3xl font-semibold sm:text-4xl">
+              On part de votre réalité, pas de la théorie
             </h2>
             <div className="mt-5 space-y-4 text-white/65">
               <p>
-                [À REMPLACER : présentation du formateur. Parcours, expériences
-                clés, ce qui vous a amené à former à l'IA, votre approche
-                pédagogique, vos certifications éventuelles…]
+                Académie IA est née d&apos;un constat simple : la plupart des
+                professionnels entendent parler d&apos;intelligence artificielle
+                sans jamais voir comment l&apos;appliquer à leur propre métier.
+                Notre rôle, c&apos;est de combler ce fossé.
               </p>
               <p>
-                [À REMPLACER : une phrase plus personnelle sur votre mission et
-                ce qui vous motive à rendre l'IA accessible à tous.]
+                Chaque formation démarre par vos vrais dossiers, vos tâches
+                chronophages et vos objectifs. On vous montre, pas à pas, les
+                bons outils et les bonnes méthodes — puis on s&apos;assure que
+                vous repartez réellement autonome, prompts en main.
               </p>
             </div>
             <div className="mt-8">

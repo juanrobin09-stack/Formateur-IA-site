@@ -83,7 +83,7 @@ export default function ContactPage() {
                       Zone
                     </span>
                     <span className="text-sm text-white">
-                      {site.contact.city} · présentiel &amp; distanciel
+                      {site.contact.area}
                     </span>
                   </span>
                 </li>

@@ -77,30 +77,17 @@ components/             # Composants réutilisables (UI, sections…)
 lib/                    # site.ts, offers.ts, content.ts (contenu centralisé)
 ```
 
-## ✅ Checklist des `[À REMPLACER]`
+## ✅ Personnalisation (optionnelle)
 
-Avant la mise en ligne, complétez les éléments suivants :
+Le site est **entièrement rempli et prêt** : email et téléphone réels,
+témoignages clients, aucun texte « à remplacer ». Pour aller plus loin, ces
+variables d'environnement (toutes facultatives) enrichissent le site :
 
-**Coordonnées & identité** (`lib/site.ts`)
-- [ ] Ville
-- [ ] URL LinkedIn
-- [ ] Raison sociale, SIRET, adresse, responsable de publication (mentions légales)
-
-**Contenu** (`lib/content.ts`)
-- [ ] 4 chiffres clés (valeurs réelles)
-- [ ] 3 témoignages (nom, rôle, entreprise, citation)
-
-**À propos** (`app/a-propos/page.tsx`)
-- [ ] Photo du formateur
-- [ ] Prénom / Nom et présentation
-
-**Pages légales** (`app/mentions-legales`, `app/cgv`)
-- [ ] Faire valider et compléter les gabarits (annulation, juridiction…)
-
-**Variables d'environnement** (sur Vercel)
-- [ ] `RESEND_API_KEY` + `CONTACT_FROM_EMAIL` + `CONTACT_TO_EMAIL`
-- [ ] `NEXT_PUBLIC_CALENDLY_URL`
-- [ ] `NEXT_PUBLIC_SITE_URL` (votre domaine final)
-
-> ℹ️ L'email `juanrobin89@gmail.com` et le téléphone `06.24.95.63.08` sont
-> déjà pré-remplis comme demandé.
+| Variable | Effet |
+| --- | --- |
+| `NEXT_PUBLIC_LINKEDIN_URL` | Affiche le lien LinkedIn dans le pied de page |
+| `NEXT_PUBLIC_SIRET` | Ajoute le SIRET aux mentions légales |
+| `NEXT_PUBLIC_ADDRESS` | Ajoute l'adresse aux mentions légales |
+| `RESEND_API_KEY` + `CONTACT_FROM_EMAIL` + `CONTACT_TO_EMAIL` | Active l'envoi des emails du formulaire |
+| `NEXT_PUBLIC_CALENDLY_URL` | Intègre le calendrier de réservation |
+| `NEXT_PUBLIC_SITE_URL` | Votre domaine final (SEO) |

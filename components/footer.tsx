@@ -76,14 +76,21 @@ export function Footer() {
               </li>
               <li className="inline-flex items-center gap-2">
                 <MapPin size={16} className="text-brand-400" />
-                {site.contact.city}
+                {site.contact.area}
               </li>
-              <li>
-                <span className="inline-flex items-center gap-2">
-                  <Linkedin size={16} className="text-brand-400" />
-                  {site.contact.linkedin}
-                </span>
-              </li>
+              {site.contact.linkedin && (
+                <li>
+                  <a
+                    href={site.contact.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 transition-colors hover:text-white"
+                  >
+                    <Linkedin size={16} className="text-brand-400" />
+                    LinkedIn
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
         </div>

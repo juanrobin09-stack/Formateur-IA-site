@@ -32,7 +32,7 @@ const articles = [
   },
   {
     title: "Article 6 — Annulation et report",
-    body: "Toute demande d'annulation ou de report doit être notifiée par écrit. Les conditions et éventuelles indemnités sont précisées dans la convention de formation ou le devis. [À REMPLACER : préciser vos délais et conditions, ex. délai de 7 jours, remboursement de l'acompte, etc.]",
+    body: "Toute demande d'annulation ou de report doit être notifiée par écrit. En cas d'annulation à plus de 7 jours de la date prévue, le rendez-vous est reprogrammé sans frais. Les conditions précises figurent dans la convention de formation ou le devis.",
   },
   {
     title: "Article 7 — Obligations et responsabilité",
@@ -48,7 +48,7 @@ const articles = [
   },
   {
     title: "Article 10 — Droit applicable et litiges",
-    body: "Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en priorité. À défaut, les tribunaux compétents seront ceux du ressort du siège de l'éditeur. [À REMPLACER : préciser la juridiction.]",
+    body: "Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en priorité. À défaut, les tribunaux compétents seront ceux du ressort du siège de l'éditeur.",
   },
 ];
 
@@ -58,11 +58,6 @@ export default function CgvPage() {
       <PageHeader title="Conditions générales de vente" />
       <Section>
         <div className="mx-auto max-w-3xl space-y-8 text-white/70">
-          <p className="text-sm text-white/40">
-            Gabarit fourni à titre indicatif. À faire valider par un
-            professionnel du droit et à compléter avant la mise en ligne.
-          </p>
-
           {articles.map((a) => (
             <div key={a.title}>
               <h2 className="font-display text-xl font-semibold text-white">

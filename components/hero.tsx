@@ -41,7 +41,7 @@ export function Hero() {
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute right-[-8%] top-[40%] -z-10 h-72 w-72 rounded-full bg-indigo-500/15 blur-[100px] animate-float-slow [animation-delay:-8s]"
+        className="pointer-events-none absolute right-[-8%] top-[40%] -z-10 h-72 w-72 rounded-full bg-accent-500/20 blur-[100px] animate-float-slow [animation-delay:-8s]"
         aria-hidden
       />
 
