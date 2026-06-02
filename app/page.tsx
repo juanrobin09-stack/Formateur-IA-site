@@ -1,8 +1,6 @@
 import { Hero } from "@/components/hero";
-import { StatsBar } from "@/components/sections/stats";
 import { ReasonsSection } from "@/components/sections/reasons";
 import { StepsSection } from "@/components/sections/steps";
-import { TestimonialsSection } from "@/components/sections/testimonials";
 import { FaqSection } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/cta";
 import { AudienceOffers } from "@/components/audience-offers";
@@ -12,7 +10,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <StatsBar />
       <ReasonsSection />
       <StepsSection />
 
@@ -28,7 +25,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <TestimonialsSection />
       <FaqSection />
       <FinalCta />
     </>

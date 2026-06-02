@@ -7,6 +7,7 @@ import { OfferCard } from "@/components/offer-card";
 import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/cta";
 import { FaqSection } from "@/components/sections/faq";
+import { TestimonialsSection } from "@/components/sections/testimonials";
 import { offersByAudience } from "@/lib/offers";
 import { individualProfiles } from "@/lib/content";
 
@@ -120,6 +121,8 @@ export default function ParticuliersPage() {
           ))}
         </div>
       </Section>
+
+      <TestimonialsSection />
 
       <FaqSection />
 

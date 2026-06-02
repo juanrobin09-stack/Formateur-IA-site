@@ -17,14 +17,6 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-/** 4 chiffres clés affichés dans la barre de réassurance. */
-export const keyStats = [
-  { value: "+30", label: "entreprises formées", note: "[À REMPLACER]" },
-  { value: "5 à 10 h", label: "économisées / semaine", note: "[À REMPLACER]" },
-  { value: "4,9/5", label: "de satisfaction", note: "[À REMPLACER]" },
-  { value: "100 %", label: "repartent avec un cas d'usage", note: "[À REMPLACER]" },
-];
-
 /** Pourquoi Formator AI. */
 export const reasons = [
   {
