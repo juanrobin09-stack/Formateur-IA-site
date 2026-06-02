@@ -10,7 +10,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { navLinks } from "@/lib/site";
 import { clsx } from "@/lib/clsx";
 
-/** Barre de navigation principale, sticky, avec menu mobile plein écran. */
+/** Barre de navigation principale, sticky, avec menu mobile déroulant. */
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +28,7 @@ export function Navbar() {
     setOpen(false);
   }, [pathname]);
 
-  // Bloque le défilement de la page quand le menu mobile est ouvert
+  // Bloque le défilement arrière-plan quand le menu est ouvert
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -41,7 +41,7 @@ export function Navbar() {
       className={clsx(
         "sticky top-0 z-50 transition-all duration-300",
         scrolled || open
-          ? "border-b border-white/10 bg-ink/85 backdrop-blur-xl"
+          ? "border-b border-white/10 bg-ink/90 backdrop-blur-xl"
           : "border-b border-transparent"
       )}
     >
@@ -89,40 +89,42 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Menu mobile plein écran */}
+      {/* Menu mobile — positionné en absolu sous la barre */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-ink/98 backdrop-blur-xl md:hidden"
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.18 }}
+            className="absolute inset-x-0 top-full z-50 max-h-[calc(100svh-4rem)] overflow-y-auto border-b border-white/10 bg-ink/98 backdrop-blur-xl md:hidden"
           >
-            <div className="container-page flex min-h-full flex-col py-6">
+            <div className="container-page flex flex-col py-4 pb-8">
               <ul className="flex flex-col gap-1">
                 {navLinks.map((link, i) => {
                   const active = pathname === link.href;
                   return (
                     <motion.li
                       key={link.href}
-                      initial={{ opacity: 0, x: -12 }}
+                      initial={{ opacity: 0, x: -8 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.05 + i * 0.04 }}
+                      transition={{ delay: i * 0.04 }}
                     >
                       <Link
                         href={link.href}
                         className={clsx(
-                          "flex items-center justify-between rounded-2xl border px-4 py-4 text-lg font-medium transition-colors",
+                          "flex items-center justify-between rounded-xl px-4 py-3.5 text-base font-medium transition-colors",
                           active
-                            ? "border-brand-500/30 bg-brand-500/10 text-white"
-                            : "border-transparent text-white/75 hover:bg-white/5 hover:text-white"
+                            ? "bg-brand-500/10 text-white"
+                            : "text-white/70 hover:bg-white/5 hover:text-white"
                         )}
                       >
                         {link.label}
                         <ArrowRight
-                          size={18}
-                          className={clsx(active ? "text-brand-300" : "text-white/30")}
+                          size={16}
+                          className={clsx(
+                            active ? "text-brand-400" : "text-white/25"
+                          )}
                         />
                       </Link>
                     </motion.li>
@@ -131,16 +133,21 @@ export function Navbar() {
               </ul>
 
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.05 + navLinks.length * 0.04 }}
-                className="mt-auto flex flex-col gap-3 pt-8"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: navLinks.length * 0.04 }}
+                className="mt-4 flex flex-col gap-2.5 border-t border-white/10 pt-4"
               >
                 <ButtonLink href="/contact" size="lg" className="w-full">
                   Réserver un audit gratuit
                   <ArrowRight size={18} />
                 </ButtonLink>
-                <ButtonLink href="/reservation" variant="secondary" size="lg" className="w-full">
+                <ButtonLink
+                  href="/reservation"
+                  variant="secondary"
+                  size="lg"
+                  className="w-full"
+                >
                   Réserver un créneau
                 </ButtonLink>
               </motion.div>
