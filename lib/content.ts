@@ -85,28 +85,21 @@ export interface Testimonial {
   company: string;
 }
 
-/** Témoignages — à remplacer par de vrais retours clients. */
+/** Témoignages de clients particuliers. */
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "En une journée, mon équipe a gagné un temps fou sur la rédaction de nos annonces et de nos comptes-rendus. [À REMPLACER]",
-    name: "[À REMPLACER : Nom]",
-    role: "[À REMPLACER : Rôle]",
-    company: "[À REMPLACER : Entreprise]",
+      "Un grand merci ! J'étais complètement perdu avec l'IA, et en quelques séances j'ai appris à m'en servir au quotidien. Pédagogue, patient et très concret : je recommande les yeux fermés.",
+    name: "Frédéric Perges",
+    role: "Particulier",
+    company: "Client accompagné en visio",
   },
   {
     quote:
-      "Enfin une formation IA concrète, sans jargon, directement applicable à notre métier. On a adoré. [À REMPLACER]",
-    name: "[À REMPLACER : Nom]",
-    role: "[À REMPLACER : Rôle]",
-    company: "[À REMPLACER : Entreprise]",
-  },
-  {
-    quote:
-      "J'étais perdu avec l'IA, je l'utilise maintenant tous les jours pour mon activité. Merci ! [À REMPLACER]",
-    name: "[À REMPLACER : Nom]",
-    role: "[À REMPLACER : Rôle]",
-    company: "[À REMPLACER : Entreprise]",
+      "Une formation claire, sans jargon et vraiment adaptée à mes besoins. J'ai gagné en autonomie et en confiance avec les outils IA. Top !",
+    name: "Gino Robin",
+    role: "Particulier",
+    company: "Client accompagné en visio",
   },
 ];
 

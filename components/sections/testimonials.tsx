@@ -10,10 +10,10 @@ export function TestimonialsSection() {
       <SectionHeading
         eyebrow="Ils nous font confiance"
         title="Ce qu'en disent nos clients"
-        subtitle="Des retours concrets de professionnels et de particuliers formés par Formator AI."
+        subtitle="Des retours concrets de particuliers accompagnés par Formator AI."
       />
 
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
+      <div className="mx-auto mt-16 grid max-w-3xl gap-6 sm:grid-cols-2">
         {testimonials.map((t, i) => (
           <Reveal key={i} delay={i * 0.08}>
             <figure className="flex h-full flex-col rounded-2xl glass p-6">
