@@ -85,7 +85,7 @@ export async function POST(request: Request) {
     const resend = new Resend(apiKey);
 
     const from = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
-    const to = process.env.CONTACT_TO_EMAIL || "juanrobin89@gmail.com";
+    const to = process.env.CONTACT_TO_EMAIL || "juanrobin09@gmail.com";
 
     const { error } = await resend.emails.send({
       from: `Académie IA <${from}>`,
