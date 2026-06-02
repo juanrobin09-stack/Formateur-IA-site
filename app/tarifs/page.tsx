@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/ui/section";
-import { OffersGrid } from "@/components/offers-grid";
+import { OffersByAudience } from "@/components/offers-grid";
 import { FaqSection } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/cta";
 import { Reveal } from "@/components/reveal";
@@ -23,7 +23,7 @@ export default function TarifsPage() {
       />
 
       <Section>
-        <OffersGrid />
+        <OffersByAudience />
 
         <Reveal className="mx-auto mt-16 max-w-3xl">
           <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm text-white/60">

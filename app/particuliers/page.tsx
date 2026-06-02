@@ -114,7 +114,7 @@ export default function ParticuliersPage() {
           subtitle="Un essai gratuit pour découvrir, puis la formule qui vous convient."
         />
         <div className="mt-16">
-          <OffersGrid />
+          <OffersGrid audience="particuliers" />
         </div>
       </Section>
 

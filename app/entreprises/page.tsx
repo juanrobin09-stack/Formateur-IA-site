@@ -172,7 +172,7 @@ export default function EntreprisesPage() {
           subtitle="De l'essai sans risque à l'accompagnement durable, finançable OPCO."
         />
         <div className="mt-16">
-          <OffersGrid />
+          <OffersGrid audience="entreprises" />
         </div>
       </Section>
 
