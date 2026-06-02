@@ -90,14 +90,14 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "Un grand merci ! J'étais complètement perdu avec l'IA, et en quelques séances j'ai appris à m'en servir au quotidien. Pédagogue, patient et très concret : je recommande les yeux fermés.",
-    name: "Frédéric Perges",
+    name: "Frédéric",
     role: "Particulier",
     company: "Client accompagné en visio",
   },
   {
     quote:
       "Une formation claire, sans jargon et vraiment adaptée à mes besoins. J'ai gagné en autonomie et en confiance avec les outils IA. Top !",
-    name: "Gino Robin",
+    name: "Gino",
     role: "Particulier",
     company: "Client accompagné en visio",
   },
