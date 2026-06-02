@@ -97,8 +97,13 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error("[contact] Erreur Resend :", error);
+      // On renvoie le détail de l'erreur pour faciliter le diagnostic.
+      const detail =
+        (error as { message?: string }).message || "Erreur inconnue";
       return NextResponse.json(
-        { error: "L'envoi a échoué. Réessayez ou écrivez-nous directement." },
+        {
+          error: `L'envoi a échoué : ${detail}`,
+        },
         { status: 502 }
       );
     }
