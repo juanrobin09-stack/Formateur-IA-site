@@ -39,10 +39,8 @@ export function Navbar() {
   return (
     <header
       className={clsx(
-        "sticky top-0 z-50 transition-all duration-300",
-        scrolled || open
-          ? "border-b border-white/10 bg-ink/90 backdrop-blur-xl"
-          : "border-b border-transparent"
+        "sticky top-0 z-50 border-b border-white/10 bg-ink/90 backdrop-blur-xl transition-all duration-300",
+        scrolled ? "shadow-lg shadow-black/20" : ""
       )}
     >
       <nav className="container-page flex h-16 items-center justify-between">
