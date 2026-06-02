@@ -78,7 +78,7 @@ export default function MentionsLegalesPage() {
             <p className="mt-3 text-sm leading-relaxed">
               Ce site n&apos;utilise pas de cookies de suivi publicitaire. Des
               cookies techniques peuvent être déposés par les services tiers
-              intégrés (paiement, prise de rendez-vous) lors de leur
+              intégrés (prise de rendez-vous) lors de leur
               utilisation.
             </p>
           </div>

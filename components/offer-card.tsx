@@ -6,7 +6,8 @@ import type { Offer } from "@/lib/offers";
 /** Détermine la destination du CTA selon le type d'offre. */
 function ctaHref(offer: Offer): string {
   // Audit gratuit et sur-mesure → contact / devis
-  if (offer.depositEUR === 0) return "/contact";
+  if (offer.price === "Offert" || offer.price === "Sur devis") return "/contact";
+  // Les autres offres → prise de rendez-vous (sans paiement)
   return `/reservation?offer=${offer.id}`;
 }
 

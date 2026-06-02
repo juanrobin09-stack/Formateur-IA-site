@@ -23,8 +23,8 @@ const articles = [
     body: "Les tarifs sont indiqués sur le site. Les prix destinés aux entreprises sont exprimés hors taxes (HT) ; les prix destinés aux particuliers sont exprimés toutes taxes comprises (TTC). Les tarifs applicables sont ceux en vigueur au jour de la commande.",
   },
   {
-    title: "Article 4 — Réservation et acompte",
-    body: "La réservation est confirmée par le versement d'un acompte en ligne (paiement sécurisé) ou selon les modalités du devis. Le solde est exigible selon les conditions convenues, au plus tard à la date de la formation.",
+    title: "Article 4 — Réservation et règlement",
+    body: "La réservation se fait par prise de rendez-vous puis acceptation du devis. Le règlement s'effectue selon les modalités convenues (virement bancaire, etc.), au plus tard à la date de la formation, sauf prise en charge par un organisme financeur.",
   },
   {
     title: "Article 5 — Financement OPCO",

@@ -31,8 +31,9 @@ export default function TarifsPage() {
             <p>
               Les tarifs entreprises sont indiqués hors taxes (HT). Les
               formations en entreprise sont potentiellement finançables via votre
-              OPCO, selon éligibilité. Un acompte peut être demandé à la
-              réservation ; le solde est réglé selon les modalités du devis.
+              OPCO, selon éligibilité. Aucun paiement en ligne : après votre
+              demande, nous vous envoyons un devis clair et convenons ensemble
+              des modalités de règlement.
             </p>
           </div>
         </Reveal>

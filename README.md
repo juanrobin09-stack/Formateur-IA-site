@@ -12,8 +12,10 @@ Stripe / Linear / Notion), animations soignées, 100 % responsive, SEO complet.
 - **Tailwind CSS** (palette noir `#0a0a0a` / blanc / bleu `#2563eb`)
 - **Framer Motion** (animations) · **lucide-react** (icônes)
 - Polices Google : **Inter** (texte) + **Fraunces** (titres)
-- **Resend** (emails de contact) · **Stripe Checkout** (acompte de réservation)
+- **Resend** (emails de contact) · **Calendly** (prise de rendez-vous)
 - Prêt pour **Vercel** (zéro configuration)
+- **Sans paiement en ligne** : les réservations passent par la prise de
+  rendez-vous puis le devis.
 
 ## 🚀 Démarrage local
 
@@ -31,8 +33,8 @@ npm run start
 ```
 
 > ✅ Le site **build et fonctionne sans aucune clé**. Les fonctionnalités qui
-> dépendent de services externes (email, paiement, agenda) s'affichent alors
-> dans un état désactivé élégant.
+> dépendent de services externes (email, agenda) s'affichent alors dans un
+> état neutre et proposent une alternative (contact direct).
 
 ## 🔐 Variables d'environnement
 
@@ -44,9 +46,7 @@ Toutes facultatives — voir [`.env.example`](./.env.example).
 | `RESEND_API_KEY` | Envoi des emails du formulaire de contact | Messages journalisés côté serveur + succès affiché |
 | `CONTACT_FROM_EMAIL` | Adresse expéditrice (vérifiée chez Resend) | `onboarding@resend.dev` |
 | `CONTACT_TO_EMAIL` | Adresse de réception des demandes | `juanrobin89@gmail.com` |
-| `STRIPE_SECRET_KEY` | Création des sessions de paiement (acompte) | Paiement désactivé (« bientôt disponible ») |
-| `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` | Active le bouton de paiement côté client | Bouton désactivé |
-| `NEXT_PUBLIC_CALENDLY_URL` | Intègre votre calendrier Calendly | Encart « bientôt disponible » |
+| `NEXT_PUBLIC_CALENDLY_URL` | Intègre votre calendrier Calendly | Encart proposant le contact direct |
 
 ## ☁️ Déploiement sur Vercel
 
@@ -56,9 +56,6 @@ Toutes facultatives — voir [`.env.example`](./.env.example).
 4. Onglet **Settings → Environment Variables** : ajoutez les variables
    souhaitées (voir tableau ci-dessus).
 5. **Deploy**. C'est en ligne 🎉
-
-Pour Stripe, utilisez vos clés **test** (`sk_test_…` / `pk_test_…`) puis
-basculez en clés **live** une fois prêt.
 
 ## 🗂️ Structure
 
@@ -71,11 +68,10 @@ app/
   tarifs/               # Toutes les offres
   a-propos/             # Formateur, mission, valeurs
   contact/              # Formulaire → /api/contact
-  reservation/          # Calendly + acompte Stripe → /api/checkout
+  reservation/          # Prise de rendez-vous Calendly (sans paiement)
   mentions-legales/     # Gabarit légal FR
   cgv/                  # Gabarit CGV FR
   api/contact/          # Envoi email (Resend) ou log
-  api/checkout/         # Session Stripe Checkout
   sitemap.ts, robots.ts # SEO
 components/             # Composants réutilisables (UI, sections…)
 lib/                    # site.ts, offers.ts, content.ts (contenu centralisé)
@@ -103,7 +99,6 @@ Avant la mise en ligne, complétez les éléments suivants :
 
 **Variables d'environnement** (sur Vercel)
 - [ ] `RESEND_API_KEY` + `CONTACT_FROM_EMAIL` + `CONTACT_TO_EMAIL`
-- [ ] `STRIPE_SECRET_KEY` + `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
 - [ ] `NEXT_PUBLIC_CALENDLY_URL`
 - [ ] `NEXT_PUBLIC_SITE_URL` (votre domaine final)
 

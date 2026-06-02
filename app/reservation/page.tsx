@@ -7,7 +7,7 @@ import { Reservation } from "@/components/reservation";
 export const metadata: Metadata = {
   title: "Réservation",
   description:
-    "Réservez votre formation IA : choisissez un créneau et réglez votre acompte en ligne en toute sécurité.",
+    "Réservez votre formation IA : choisissez un créneau, sans paiement en ligne. Audit gratuit et sans engagement.",
 };
 
 export default function ReservationPage() {
@@ -15,8 +15,8 @@ export default function ReservationPage() {
     <>
       <PageHeader
         eyebrow="Réservation"
-        title="Réservez votre formation"
-        subtitle="Choisissez un créneau qui vous convient et confirmez avec un acompte sécurisé. Simple et rapide."
+        title="Réservez votre créneau"
+        subtitle="Choisissez un horaire qui vous arrange. C'est gratuit, sans engagement et sans paiement en ligne."
       />
 
       <Section>

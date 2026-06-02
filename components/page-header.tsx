@@ -20,7 +20,7 @@ export function PageHeader({
         className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[28rem] w-[44rem] -translate-x-1/2 rounded-full bg-brand-600/15 blur-[120px]"
         aria-hidden
       />
-      <div className="container-page py-20 text-center sm:py-28">
+      <div className="container-page py-16 text-center sm:py-24">
         <Reveal className="mx-auto max-w-3xl">
           {eyebrow && (
             <p className="mb-3 text-sm font-medium uppercase tracking-widest text-brand-400">

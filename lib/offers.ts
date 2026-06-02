@@ -13,8 +13,6 @@ export interface Offer {
   name: string;
   /** Prix affiché tel quel (ex. « 590 € HT », « OFFERT »). */
   price: string;
-  /** Montant de l'acompte en euros pour Stripe (0 = pas d'acompte). */
-  depositEUR: number;
   duration: string;
   description: string;
   features: string[];
@@ -32,7 +30,6 @@ export const offers: Offer[] = [
     audience: "entreprises",
     name: "Audit IA",
     price: "Offert",
-    depositEUR: 0,
     duration: "30 min · diagnostic",
     description:
       "Un diagnostic gratuit pour identifier vos cas d'usage IA prioritaires et le temps que vous pourriez gagner.",
@@ -50,7 +47,6 @@ export const offers: Offer[] = [
     audience: "entreprises",
     name: "Atelier Découverte",
     price: "590 € HT",
-    depositEUR: 150,
     duration: "½ journée · jusqu'à 8 personnes",
     description:
       "Une demi-journée pour démystifier l'IA et repartir avec vos premiers prompts utiles au quotidien.",
@@ -67,7 +63,6 @@ export const offers: Offer[] = [
     audience: "entreprises",
     name: "Formation IA Métier",
     price: "1 200 € HT",
-    depositEUR: 300,
     duration: "1 journée · jusqu'à 10 personnes",
     description:
       "Notre offre phare : une journée complète, 100 % personnalisée à votre métier, pour rendre votre équipe autonome.",
@@ -87,7 +82,6 @@ export const offers: Offer[] = [
     audience: "entreprises",
     name: "Programme Transformation",
     price: "2 400 € HT",
-    depositEUR: 500,
     duration: "2 jours + 1 mois de suivi",
     description:
       "Un accompagnement en profondeur pour ancrer l'IA dans vos process et mesurer les gains.",
@@ -105,7 +99,6 @@ export const offers: Offer[] = [
     audience: "entreprises",
     name: "Sur-mesure / Intra-entreprise",
     price: "Sur devis",
-    depositEUR: 0,
     duration: "Format adapté à vos besoins",
     description:
       "Un programme entièrement conçu pour votre organisation, vos équipes et vos objectifs.",
@@ -125,7 +118,6 @@ export const offers: Offer[] = [
     audience: "particuliers",
     name: "Atelier collectif en ligne",
     price: "49 €",
-    depositEUR: 49,
     duration: "2 h · en visio",
     description:
       "Une session live pour découvrir l'IA, poser vos questions et repartir avec des automatismes simples.",
@@ -142,7 +134,6 @@ export const offers: Offer[] = [
     audience: "particuliers",
     name: "Cours particulier en visio",
     price: "75 €",
-    depositEUR: 75,
     duration: "1 h · en visio individuelle",
     description:
       "Un coaching individuel, 100 % adapté à votre objectif (recherche d'emploi, projet, productivité…).",
@@ -161,7 +152,6 @@ export const offers: Offer[] = [
     audience: "particuliers",
     name: "Pack Autonomie IA",
     price: "290 €",
-    depositEUR: 90,
     duration: "5 h + support",
     description:
       "Un parcours complet pour devenir vraiment autonome avec l'IA, à votre rythme.",
