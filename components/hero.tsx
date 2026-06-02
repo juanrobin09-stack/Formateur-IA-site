@@ -30,21 +30,32 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Décor d'arrière-plan */}
+      {/* Décor d'arrière-plan animé */}
       <div className="pointer-events-none absolute inset-0 bg-grid" aria-hidden />
       <div
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[40rem] w-[60rem] -translate-x-1/2 rounded-full bg-brand-600/20 blur-[120px]"
+        className="pointer-events-none absolute left-1/2 top-[-6rem] -z-10 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-brand-600/25 blur-[120px] animate-pulse-glow sm:h-[44rem] sm:w-[60rem]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute left-[-10%] top-[20%] -z-10 h-72 w-72 rounded-full bg-brand-500/20 blur-[100px] animate-float-slow"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute right-[-8%] top-[40%] -z-10 h-72 w-72 rounded-full bg-indigo-500/15 blur-[100px] animate-float-slow [animation-delay:-8s]"
         aria-hidden
       />
 
-      <div className="container-page relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-20 text-center">
+      <div className="container-page relative flex min-h-[calc(100svh-4rem)] flex-col items-center justify-center py-16 text-center sm:py-20">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/70 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/70 backdrop-blur-sm sm:text-sm"
         >
-          <Sparkles size={14} className="text-brand-400" />
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
+          </span>
           Formations IA pour entreprises &amp; particuliers
         </motion.div>
 
@@ -53,7 +64,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-8"
+          className="mt-7"
         >
           <AudienceToggle value={audience} onChange={setAudience} />
         </motion.div>
@@ -62,14 +73,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-8 max-w-4xl font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
+          className="mt-7 max-w-4xl font-display text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-6xl md:text-7xl"
         >
-          <span className="text-gradient">
-            L&apos;intelligence artificielle, enfin utile à votre métier.
-          </span>
+          <span className="text-gradient">L&apos;intelligence artificielle, </span>
+          <span className="text-shine">enfin utile à votre métier.</span>
         </motion.h1>
 
-        <div className="mt-6 min-h-[5.5rem] max-w-2xl">
+        <div className="mt-5 min-h-[6.5rem] max-w-2xl sm:min-h-[5.5rem]">
           <AnimatePresence mode="wait">
             <motion.p
               key={audience}
@@ -77,7 +87,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.3 }}
-              className="text-lg leading-relaxed text-white/60 sm:text-xl"
+              className="text-base leading-relaxed text-white/60 sm:text-xl"
             >
               {copy.subtitle}
             </motion.p>
@@ -88,7 +98,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
-          className="mt-10 flex flex-col items-center gap-3 sm:flex-row"
+          className="mt-8 flex w-full flex-col items-center gap-3 sm:w-auto sm:flex-row"
         >
           <ButtonLink href={copy.href} size="lg" className="w-full sm:w-auto">
             {copy.cta}
@@ -119,16 +129,16 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 flex flex-col items-center gap-4"
+          className="mt-14 flex flex-col items-center gap-4"
         >
           <p className="text-xs uppercase tracking-widest text-white/40">
             On vous forme sur les meilleurs outils
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <div className="flex flex-wrap items-center justify-center gap-2.5">
             {aiTools.map((tool) => (
               <span
                 key={tool}
-                className="text-sm font-medium text-white/50 transition-colors hover:text-white/80"
+                className="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-white/60 backdrop-blur-sm transition-colors hover:border-brand-500/40 hover:text-white sm:text-sm"
               >
                 {tool}
               </span>

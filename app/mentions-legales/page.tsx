@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
-  description: "Mentions légales du site Formator AI.",
+  description: "Mentions légales du site Académie IA.",
   robots: { index: false, follow: true },
 };
 

@@ -9,7 +9,7 @@ import { FinalCta } from "@/components/sections/cta";
 export const metadata: Metadata = {
   title: "À propos",
   description:
-    "Découvrez Formator AI : notre mission, nos valeurs et le formateur derrière les formations IA pour entreprises et particuliers.",
+    "Découvrez Académie IA : notre mission, nos valeurs et le formateur derrière les formations IA pour entreprises et particuliers.",
 };
 
 const values = [
@@ -39,7 +39,7 @@ export default function AProposPage() {
       <PageHeader
         eyebrow="À propos"
         title="L'IA utile, accessible à tous"
-        subtitle="Formator AI démocratise l'intelligence artificielle auprès des entreprises et des particuliers, avec une approche concrète et sans jargon."
+        subtitle="Académie IA démocratise l'intelligence artificielle auprès des entreprises et des particuliers, avec une approche concrète et sans jargon."
       />
 
       {/* Le formateur */}
@@ -50,7 +50,7 @@ export default function AProposPage() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand-600/20 font-display text-4xl font-bold text-brand-300">
-                    F
+                    A
                   </div>
                   <p className="mt-4 text-sm text-white/40">
                     [À REMPLACER : photo du formateur]

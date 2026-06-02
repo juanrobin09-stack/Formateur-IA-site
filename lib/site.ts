@@ -1,5 +1,5 @@
 /**
- * Configuration globale de la marque Formator AI.
+ * Configuration globale de la marque Académie IA.
  * Centralise le contenu réutilisé dans tout le site (nom, slogan, coordonnées…).
  *
  * Les données personnelles sont volontairement laissées en [À REMPLACER]
@@ -7,11 +7,11 @@
  */
 
 export const site = {
-  name: "Formator AI",
+  name: "Académie IA",
   slogan: "L'intelligence artificielle, enfin utile à votre métier.",
   baseline:
     "Passez de « l'IA c'est flou » à « je l'utilise dès demain ». Des formations 100 % personnalisées à votre métier.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://formator-ai.fr",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://academie-ia.fr",
 
   // --- Coordonnées (fournies / à compléter) ---------------------------------
   contact: {

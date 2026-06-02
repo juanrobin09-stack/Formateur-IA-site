@@ -1,8 +1,8 @@
-# Formator AI — Site vitrine
+# Académie IA — Site vitrine
 
 > L'intelligence artificielle, enfin utile à votre métier.
 
-Site vitrine moderne pour **Formator AI**, organisme de formation à l'IA pour
+Site vitrine moderne pour **Académie IA**, organisme de formation à l'IA pour
 **entreprises** et **particuliers**. Design haut de gamme (inspiration
 Stripe / Linear / Notion), animations soignées, 100 % responsive, SEO complet.
 
@@ -42,7 +42,7 @@ Toutes facultatives — voir [`.env.example`](./.env.example).
 
 | Variable | Rôle | Sans la variable |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | URL publique (SEO / Open Graph / sitemap) | Valeur par défaut `https://formator-ai.fr` |
+| `NEXT_PUBLIC_SITE_URL` | URL publique (SEO / Open Graph / sitemap) | Valeur par défaut `https://academie-ia.fr` |
 | `RESEND_API_KEY` | Envoi des emails du formulaire de contact | Messages journalisés côté serveur + succès affiché |
 | `CONTACT_FROM_EMAIL` | Adresse expéditrice (vérifiée chez Resend) | `onboarding@resend.dev` |
 | `CONTACT_TO_EMAIL` | Adresse de réception des demandes | `juanrobin89@gmail.com` |

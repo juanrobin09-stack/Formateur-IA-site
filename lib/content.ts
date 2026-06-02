@@ -1,6 +1,6 @@
 /**
  * Contenu éditorial réutilisable : chiffres clés, témoignages, FAQ,
- * étapes, raisons de choisir Formator AI, cas d'usage par secteur.
+ * étapes, raisons de choisir Académie IA, cas d'usage par secteur.
  *
  * Les éléments de preuve sociale sont balisés [À REMPLACER].
  */
@@ -17,7 +17,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-/** Pourquoi Formator AI. */
+/** Pourquoi Académie IA. */
 export const reasons = [
   {
     title: "100 % personnalisé métier",

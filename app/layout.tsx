@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "formation ChatGPT",
     "IA PME",
     "formation IA particuliers",
-    "Formator AI",
+    "Académie IA",
   ],
   authors: [{ name: site.name }],
   creator: site.name,

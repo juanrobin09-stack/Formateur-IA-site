@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez Formator AI pour réserver un audit gratuit, demander un devis ou poser vos questions sur nos formations IA.",
+    "Contactez Académie IA pour réserver un audit gratuit, demander un devis ou poser vos questions sur nos formations IA.",
 };
 
 export default function ContactPage() {

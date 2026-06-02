@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 /**
- * Configuration Tailwind de Formator AI.
+ * Configuration Tailwind de Académie IA.
  * Palette : noir #0a0a0a, blanc, bleu #2563eb.
  * Beaucoup d'air, grandes typos, animations douces.
  */
@@ -49,11 +49,32 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-12px)" },
         },
+        "float-slow": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "33%": { transform: "translate(30px, -30px) scale(1.05)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.97)" },
+        },
+        aurora: {
+          "0%, 100%": { transform: "translate(-10%, -10%) rotate(0deg)" },
+          "50%": { transform: "translate(10%, 10%) rotate(180deg)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "0.8" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
-        shimmer: "shimmer 8s linear infinite",
+        shimmer: "shimmer 6s linear infinite",
         float: "float 6s ease-in-out infinite",
+        "float-slow": "float-slow 16s ease-in-out infinite",
+        aurora: "aurora 22s ease-in-out infinite",
+        "pulse-glow": "pulse-glow 5s ease-in-out infinite",
+        marquee: "marquee 28s linear infinite",
       },
     },
   },

@@ -1,5 +1,5 @@
 /**
- * Catalogue des offres et tarifs de Formator AI.
+ * Catalogue des offres et tarifs de Académie IA.
  * Source unique de vérité, réutilisée sur l'accueil, /tarifs, /entreprises,
  * /particuliers et /reservation.
  */

@@ -57,7 +57,7 @@ export async function POST(request: Request) {
   const audienceLabel =
     audience === "particulier" ? "Particulier" : "Entreprise";
 
-  const subject = `Nouveau message Formator AI — ${audienceLabel} (${name})`;
+  const subject = `Nouveau message Académie IA — ${audienceLabel} (${name})`;
   const text = [
     `Nom : ${name}`,
     `Email : ${email}`,
@@ -88,7 +88,7 @@ export async function POST(request: Request) {
     const to = process.env.CONTACT_TO_EMAIL || "juanrobin89@gmail.com";
 
     const { error } = await resend.emails.send({
-      from: `Formator AI <${from}>`,
+      from: `Académie IA <${from}>`,
       to: [to],
       reply_to: email,
       subject,

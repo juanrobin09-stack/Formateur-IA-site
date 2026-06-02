@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Conditions générales de vente",
-  description: "Conditions générales de vente des formations Formator AI.",
+  description: "Conditions générales de vente des formations Académie IA.",
   robots: { index: false, follow: true },
 };
 
@@ -40,7 +40,7 @@ const articles = [
   },
   {
     title: "Article 8 — Propriété intellectuelle",
-    body: "Les supports de formation restent la propriété de Formator AI. Ils sont fournis pour un usage strictement personnel ou interne et ne peuvent être reproduits ou diffusés sans autorisation.",
+    body: "Les supports de formation restent la propriété d'Académie IA. Ils sont fournis pour un usage strictement personnel ou interne et ne peuvent être reproduits ou diffusés sans autorisation.",
   },
   {
     title: "Article 9 — Données personnelles",

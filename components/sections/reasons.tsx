@@ -11,7 +11,7 @@ import { reasons } from "@/lib/content";
 
 const icons = [UserCheck, Rocket, Boxes, MessageSquare, Wallet];
 
-/** Section « Pourquoi Formator AI ». */
+/** Section « Pourquoi Académie IA ». */
 export function ReasonsSection() {
   return (
     <Section>
@@ -26,8 +26,8 @@ export function ReasonsSection() {
           const Icon = icons[i % icons.length];
           return (
             <Reveal key={reason.title} delay={i * 0.06}>
-              <div className="group h-full rounded-2xl glass p-6 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.05]">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600/15 text-brand-400 transition-colors group-hover:bg-brand-600/25">
+              <div className="group h-full rounded-2xl glass-hover p-6">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600/15 text-brand-400 transition-all group-hover:scale-110 group-hover:bg-brand-600/25">
                   <Icon size={22} />
                 </div>
                 <h3 className="mt-5 font-display text-lg font-semibold">

@@ -10,7 +10,7 @@ import { Info } from "lucide-react";
 export const metadata: Metadata = {
   title: "Tarifs",
   description:
-    "Tous les tarifs des formations Formator AI : audit gratuit, ateliers, formation IA métier, programme transformation et offres particuliers.",
+    "Tous les tarifs des formations Académie IA : audit gratuit, ateliers, formation IA métier, programme transformation et offres particuliers.",
 };
 
 export default function TarifsPage() {

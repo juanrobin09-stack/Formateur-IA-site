@@ -16,10 +16,10 @@ export function OfferCard({ offer }: { offer: Offer }) {
   return (
     <div
       className={clsx(
-        "relative flex h-full flex-col rounded-2xl p-6 transition-all duration-300 sm:p-8",
+        "relative flex h-full flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 sm:p-8",
         offer.highlight
-          ? "border border-brand-500/50 bg-gradient-to-b from-brand-600/15 to-white/[0.02] shadow-xl shadow-brand-600/10 ring-1 ring-brand-500/30"
-          : "glass hover:border-white/20"
+          ? "border-gradient border border-brand-500/50 bg-gradient-to-b from-brand-600/20 to-white/[0.02] shadow-xl shadow-brand-600/20 ring-1 ring-brand-500/30 lg:scale-[1.03]"
+          : "glass-hover"
       )}
     >
       {offer.badge && (

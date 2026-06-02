@@ -10,7 +10,7 @@ export function TestimonialsSection() {
       <SectionHeading
         eyebrow="Ils nous font confiance"
         title="Ce qu'en disent nos clients"
-        subtitle="Des retours concrets de particuliers accompagnés par Formator AI."
+        subtitle="Des retours concrets de particuliers accompagnés par Académie IA."
       />
 
       <div className="mx-auto mt-16 grid max-w-3xl gap-6 sm:grid-cols-2">
