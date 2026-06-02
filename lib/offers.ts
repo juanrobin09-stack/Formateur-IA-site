@@ -92,7 +92,7 @@ export const offers: Offer[] = [
   {
     id: "offre-exclusivite",
     audience: "entreprises",
-    name: "Offre d'exclusivité — premiers clients",
+    name: "Offre d'exclusivité",
     price: "Exclusif",
     duration: "14 à 16 mois",
     description:
