@@ -20,17 +20,20 @@ export default function MentionsLegalesPage() {
               Éditeur du site
             </h2>
             <p className="mt-3 text-sm leading-relaxed">
-              Le site {site.name} est édité par {site.legal.company}.
-              {site.legal.address && (
-                <>
-                  <br />
-                  Adresse : {site.legal.address}
-                </>
-              )}
+              Le site {site.name} est édité par {site.legal.director},{" "}
+              {site.legal.statut} (EI).
+              <br />
+              SIREN : {site.legal.siren}
               {site.legal.siret && (
                 <>
                   <br />
                   SIRET : {site.legal.siret}
+                </>
+              )}
+              {site.legal.address && (
+                <>
+                  <br />
+                  Adresse : {site.legal.address}
                 </>
               )}
               <br />

@@ -25,6 +25,9 @@ export const site = {
   // --- Données légales ------------------------------------------------------
   legal: {
     company: "Académie IA",
+    director: "Juan Robin",
+    statut: "Entrepreneur individuel",
+    siren: "994 221 653",
     siret: process.env.NEXT_PUBLIC_SIRET || "",
     address: process.env.NEXT_PUBLIC_ADDRESS || "",
     host: "Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA",
