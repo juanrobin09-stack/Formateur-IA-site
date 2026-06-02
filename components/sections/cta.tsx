@@ -27,10 +27,10 @@ export function FinalCta({
               className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-brand-500/30 blur-[100px]"
               aria-hidden
             />
-            <h2 className="mx-auto max-w-2xl font-display text-3xl font-bold leading-tight sm:text-5xl">
+            <h2 className="mx-auto max-w-2xl text-balance font-display text-[1.75rem] font-bold leading-[1.12] sm:text-5xl">
               {title}
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-lg text-white/65">
+            <p className="mx-auto mt-4 max-w-xl text-pretty text-base text-white/65 sm:text-lg">
               {subtitle}
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">

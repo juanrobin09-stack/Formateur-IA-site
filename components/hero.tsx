@@ -59,13 +59,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-7 max-w-4xl font-display text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-6xl md:text-7xl"
+          className="mt-7 max-w-3xl text-balance font-display text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-6xl md:text-7xl"
         >
           <span className="text-gradient">L&apos;intelligence artificielle, </span>
           <span className="text-shine">enfin utile à votre métier.</span>
         </motion.h1>
 
-        <div className="mt-5 min-h-[6.5rem] max-w-2xl sm:min-h-[5.5rem]">
+        <div className="mx-auto mt-5 min-h-[7rem] max-w-xl sm:min-h-[5.5rem]">
           <AnimatePresence mode="wait">
             <motion.p
               key={audience}
@@ -73,7 +73,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.3 }}
-              className="text-base leading-relaxed text-white/60 sm:text-xl"
+              className="text-pretty text-base leading-relaxed text-white/65 sm:text-lg"
             >
               {copy.subtitle}
             </motion.p>

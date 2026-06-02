@@ -28,11 +28,11 @@ export function PageHeader({
               {eyebrow}
             </span>
           )}
-          <h1 className="font-display text-[2.25rem] font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="text-balance font-display text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
             {title}
           </h1>
           {subtitle && (
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-white/60">
+            <p className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-white/60 sm:text-lg">
               {subtitle}
             </p>
           )}
