@@ -23,11 +23,12 @@ export function PageHeader({
       <div className="container-page py-16 text-center sm:py-24">
         <Reveal className="mx-auto max-w-3xl">
           {eyebrow && (
-            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-brand-400">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-400" />
               {eyebrow}
-            </p>
+            </span>
           )}
-          <h1 className="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          <h1 className="font-display text-[2.25rem] font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl">
             {title}
           </h1>
           {subtitle && (

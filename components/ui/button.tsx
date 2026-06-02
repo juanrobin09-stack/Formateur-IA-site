@@ -6,13 +6,13 @@ type Variant = "primary" | "secondary" | "ghost";
 type Size = "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50";
+  "group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand-600 text-white shadow-lg shadow-brand-600/25 hover:bg-brand-500 hover:shadow-brand-500/40 hover:-translate-y-0.5",
+    "bg-gradient-to-b from-brand-500 to-brand-700 text-white shadow-lg shadow-brand-600/30 ring-1 ring-inset ring-white/15 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-500/40",
   secondary:
-    "border border-white/15 bg-white/5 text-white hover:bg-white/10 hover:border-white/25",
+    "border border-white/15 bg-white/5 text-white backdrop-blur-sm hover:bg-white/10 hover:border-white/25 hover:-translate-y-0.5",
   ghost: "text-white/80 hover:text-white hover:bg-white/5",
 };
 
@@ -25,6 +25,17 @@ interface CommonProps {
   variant?: Variant;
   size?: Size;
   className?: string;
+}
+
+/** Reflet lumineux qui balaye le bouton au survol (effet premium). */
+function Shine({ variant }: { variant: Variant }) {
+  if (variant === "ghost") return null;
+  return (
+    <span
+      aria-hidden
+      className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full"
+    />
+  );
 }
 
 /** Bouton-lien (interne ou externe). */
@@ -44,7 +55,10 @@ export function ButtonLink({
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       {...props}
     >
-      {children}
+      <Shine variant={variant} />
+      <span className="relative z-10 inline-flex items-center gap-2">
+        {children}
+      </span>
     </Link>
   );
 }
@@ -62,7 +76,10 @@ export function Button({
       className={clsx(base, variants[variant], sizes[size], className)}
       {...props}
     >
-      {children}
+      <Shine variant={variant} />
+      <span className="relative z-10 inline-flex items-center gap-2">
+        {children}
+      </span>
     </button>
   );
 }
