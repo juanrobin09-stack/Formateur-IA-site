@@ -16,18 +16,18 @@ export function OfferCard({ offer }: { offer: Offer }) {
   return (
     <div
       className={clsx(
-        "relative flex h-full flex-col rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 sm:p-8",
+        "relative flex h-full flex-col rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1.5 sm:p-7",
         offer.highlight
-          ? "border-gradient border border-brand-500/50 bg-gradient-to-b from-brand-600/20 to-white/[0.02] shadow-xl shadow-brand-600/20 ring-1 ring-brand-500/30 lg:scale-[1.03]"
+          ? "border-gradient border border-brand-500/50 bg-gradient-to-b from-brand-600/20 to-white/[0.02] shadow-xl shadow-accent-600/20 ring-1 ring-brand-500/30 lg:scale-[1.03]"
           : "glass-hover"
       )}
     >
       {offer.badge && (
         <span
           className={clsx(
-            "absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium",
+            "absolute -top-3 left-1/2 inline-flex -translate-x-1/2 items-center gap-1 whitespace-nowrap rounded-full px-3 py-1 text-xs font-medium",
             offer.highlight
-              ? "bg-brand-500 text-white shadow-lg shadow-brand-600/40"
+              ? "bg-gradient-to-r from-brand-500 to-accent-600 text-white shadow-lg shadow-accent-600/40"
               : "border border-white/15 bg-ink text-white/80"
           )}
         >
@@ -36,31 +36,35 @@ export function OfferCard({ offer }: { offer: Offer }) {
         </span>
       )}
 
-      <h3 className="font-display text-xl font-semibold">{offer.name}</h3>
+      <h3 className="mt-1 font-display text-lg font-semibold sm:text-xl">
+        {offer.name}
+      </h3>
       <p className="mt-1 text-sm text-white/50">{offer.duration}</p>
 
       <div className="mt-5 flex items-baseline gap-1">
-        <span className="font-display text-4xl font-bold">{offer.price}</span>
+        <span className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
+          {offer.price}
+        </span>
       </div>
 
-      <p className="mt-4 text-sm leading-relaxed text-white/60">
+      <p className="mt-4 text-pretty text-sm leading-relaxed text-white/60">
         {offer.description}
       </p>
 
-      <ul className="mt-6 space-y-3">
+      <div className="my-6 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      <ul className="space-y-3">
         {offer.features.map((feature) => (
           <li key={feature} className="flex items-start gap-2.5 text-sm">
-            <Check
-              size={16}
-              className="mt-0.5 shrink-0 text-brand-400"
-              aria-hidden
-            />
+            <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-500/15 text-brand-300">
+              <Check size={11} strokeWidth={3} aria-hidden />
+            </span>
             <span className="text-white/75">{feature}</span>
           </li>
         ))}
       </ul>
 
-      <div className="mt-8 pt-2">
+      <div className="mt-auto pt-8 max-sm:pt-6">
         <ButtonLink
           href={ctaHref(offer)}
           variant={offer.highlight ? "primary" : "secondary"}
