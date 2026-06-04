@@ -29,10 +29,8 @@ export default function TarifsPage() {
           <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm text-white/60">
             <Info size={18} className="mt-0.5 shrink-0 text-brand-400" />
             <p>
-              Les formations en entreprise sont potentiellement finançables via
-              votre OPCO, selon éligibilité. Aucun paiement en ligne : après
-              votre demande, nous vous envoyons un devis clair et convenons
-              ensemble des modalités de règlement.
+              Aucun paiement en ligne : après votre demande, nous vous envoyons
+              un devis clair et convenons ensemble des modalités de règlement.
             </p>
           </div>
         </Reveal>

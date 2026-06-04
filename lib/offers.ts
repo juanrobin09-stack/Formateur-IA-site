@@ -33,9 +33,9 @@ export const offers: Offer[] = [
     price: "Offert",
     duration: "7 à 14 jours · sans engagement",
     description:
-      "Une période d'essai sans engagement financier pour découvrir la qualité de l'accompagnement et construire la confiance.",
+      "Une période d'essai sans aucun engagement pour découvrir la qualité de l'accompagnement et construire la confiance.",
     features: [
-      "Aucun engagement financier",
+      "Aucun engagement de départ",
       "Accompagnement concret et représentatif",
       "Idéal pour démarrer en toute confiance",
     ],
@@ -53,7 +53,7 @@ export const offers: Offer[] = [
     features: [
       "Tarif attractif selon la durée et le périmètre",
       "Accès à une prestation concrète",
-      "Engagement financier limité et maîtrisé",
+      "Investissement limité et maîtrisé",
     ],
     cta: "Réserver l'échantillon",
   },

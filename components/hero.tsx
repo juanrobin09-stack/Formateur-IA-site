@@ -11,7 +11,7 @@ import type { Audience } from "@/lib/offers";
 const heroCopy: Record<Audience, { subtitle: string; cta: string; href: string }> = {
   entreprises: {
     subtitle:
-      "Formez vos équipes à l'IA générative et gagnez 5 à 10 heures par semaine. Des programmes 100 % personnalisés à votre métier, finançables OPCO.",
+      "Formez vos équipes à l'IA générative et gagnez 5 à 10 heures par semaine. Des programmes 100 % personnalisés à votre métier.",
     cta: "Réserver un audit gratuit",
     href: "/contact",
   },

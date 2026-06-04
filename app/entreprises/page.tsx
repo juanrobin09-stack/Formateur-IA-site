@@ -4,7 +4,7 @@ import {
   Clock,
   TrendingUp,
   ShieldCheck,
-  Banknote,
+  Target,
 } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Section, SectionHeading } from "@/components/ui/section";
@@ -18,7 +18,7 @@ import { sectorUseCases } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Formations IA pour entreprises",
   description:
-    "Formez vos équipes à l'IA générative. Programmes sur-mesure par métier, finançables OPCO. Immobilier, restauration, BTP, artisans, commerce, professions libérales.",
+    "Formez vos équipes à l'IA générative. Programmes sur-mesure par métier. Immobilier, restauration, BTP, artisans, commerce, professions libérales.",
 };
 
 const benefits = [
@@ -41,10 +41,10 @@ const benefits = [
       "On commence par un audit gratuit pour valider le retour sur investissement.",
   },
   {
-    icon: Banknote,
-    title: "Finançable OPCO",
+    icon: Target,
+    title: "100 % sur-mesure",
     description:
-      "Vos formations sont potentiellement prises en charge, selon éligibilité.",
+      "Un programme conçu pour votre métier, vos outils et vos objectifs précis.",
   },
 ];
 
@@ -140,19 +140,19 @@ export default function EntreprisesPage() {
 
       <StepsSection />
 
-      {/* Financement OPCO */}
+      {/* Devis sur-mesure */}
       <Section>
         <Reveal>
           <div className="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-gradient-to-br from-brand-600/10 to-transparent p-8 sm:p-12">
             <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-xl">
                 <h2 className="font-display text-2xl font-semibold sm:text-3xl">
-                  Vos formations finançables par votre OPCO
+                  Un devis clair, adapté à vos équipes
                 </h2>
                 <p className="mt-3 text-white/60">
-                  Selon votre éligibilité, tout ou partie de la formation peut
-                  être prise en charge. Nous vous fournissons le devis et les
-                  documents nécessaires à votre demande de financement.
+                  Chaque programme est construit sur-mesure selon votre métier,
+                  vos objectifs et le nombre de participants. Décrivez-nous votre
+                  besoin et nous vous envoyons une proposition détaillée.
                 </p>
               </div>
               <ButtonLink href="/contact" size="lg" className="shrink-0">
@@ -169,7 +169,7 @@ export default function EntreprisesPage() {
         <SectionHeading
           eyebrow="Nos formules"
           title="Un parcours adapté à vos équipes"
-          subtitle="De l'essai sans risque à l'accompagnement durable, finançable OPCO."
+          subtitle="De l'essai sans risque à l'accompagnement durable."
         />
         <div className="mt-16">
           <OffersGrid audience="entreprises" />

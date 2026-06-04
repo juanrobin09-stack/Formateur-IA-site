@@ -38,9 +38,9 @@ export const reasons = [
       "Une pédagogie simple et rassurante, pensée pour celles et ceux qui partent de zéro.",
   },
   {
-    title: "Finançable",
+    title: "Sans risque",
     description:
-      "Formations en entreprise potentiellement finançables via votre OPCO, selon éligibilité.",
+      "On commence toujours par une première étape gratuite et sans engagement. Vous jugez la qualité par vous-même, puis vous décidez.",
   },
 ];
 
@@ -109,11 +109,6 @@ export const faq: FaqItem[] = [
     question: "C'est en présentiel ou en distanciel ?",
     answer:
       "Les deux. Les formations en entreprise se déroulent dans vos locaux ou en visio, selon vos préférences. Les offres particuliers se font en visio.",
-  },
-  {
-    question: "Est-ce finançable ?",
-    answer:
-      "Les formations en entreprise sont potentiellement finançables via votre OPCO, selon votre éligibilité. Nous fournissons un devis et les documents nécessaires.",
   },
   {
     question: "Comment se déroule l'accompagnement ?",

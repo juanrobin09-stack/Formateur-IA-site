@@ -24,30 +24,26 @@ const articles = [
   },
   {
     title: "Article 4 — Réservation et règlement",
-    body: "La réservation se fait par prise de rendez-vous puis acceptation du devis. Le règlement s'effectue selon les modalités convenues (virement bancaire, etc.), au plus tard à la date de la formation, sauf prise en charge par un organisme financeur.",
+    body: "La réservation se fait par prise de rendez-vous puis acceptation du devis. Le règlement s'effectue selon les modalités convenues (virement bancaire, etc.), au plus tard à la date de la formation.",
   },
   {
-    title: "Article 5 — Financement OPCO",
-    body: "Les formations destinées aux entreprises peuvent faire l'objet d'une prise en charge par un OPCO, sous réserve d'éligibilité. Le client fait son affaire des démarches de financement ; les documents nécessaires sont fournis sur demande.",
-  },
-  {
-    title: "Article 6 — Annulation et report",
+    title: "Article 5 — Annulation et report",
     body: "Toute demande d'annulation ou de report doit être notifiée par écrit. En cas d'annulation à plus de 7 jours de la date prévue, le rendez-vous est reprogrammé sans frais. Les conditions précises figurent dans la convention de formation ou le devis.",
   },
   {
-    title: "Article 7 — Obligations et responsabilité",
+    title: "Article 6 — Obligations et responsabilité",
     body: `${site.name} s'engage à dispenser ses formations avec professionnalisme et conformément aux objectifs annoncés. ${site.name} est tenu à une obligation de moyens. Sa responsabilité ne saurait être engagée pour l'usage fait par le client des outils et méthodes enseignés.`,
   },
   {
-    title: "Article 8 — Propriété intellectuelle",
+    title: "Article 7 — Propriété intellectuelle",
     body: "Les supports de formation restent la propriété d'Académie IA. Ils sont fournis pour un usage strictement personnel ou interne et ne peuvent être reproduits ou diffusés sans autorisation.",
   },
   {
-    title: "Article 9 — Données personnelles",
+    title: "Article 8 — Données personnelles",
     body: `Les données collectées sont traitées conformément au RGPD. Le client dispose d'un droit d'accès, de rectification et de suppression à l'adresse ${site.contact.email}.`,
   },
   {
-    title: "Article 10 — Droit applicable et litiges",
+    title: "Article 9 — Droit applicable et litiges",
     body: "Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en priorité. À défaut, les tribunaux compétents seront ceux du ressort du siège de l'éditeur.",
   },
 ];

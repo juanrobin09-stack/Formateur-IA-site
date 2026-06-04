@@ -3,14 +3,14 @@ import {
   Rocket,
   Boxes,
   MessageSquare,
-  Wallet,
+  ShieldCheck,
 } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/reveal";
 import { reasons } from "@/lib/content";
 import { clsx } from "@/lib/clsx";
 
-const icons = [UserCheck, Rocket, Boxes, MessageSquare, Wallet];
+const icons = [UserCheck, Rocket, Boxes, MessageSquare, ShieldCheck];
 
 // Disposition « bento » : la 1re et la 3e carte sont mises en avant (plus larges).
 const spans = [
