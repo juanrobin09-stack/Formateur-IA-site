@@ -169,7 +169,7 @@ export default function EntreprisesPage() {
         <SectionHeading
           eyebrow="Nos formules"
           title="Un parcours adapté à vos équipes"
-          subtitle="De l'essai sans risque à l'accompagnement durable."
+          subtitle="Audit gratuit · Formation sur-mesure · Accompagnement continu. Paiement unique à chaque prestation."
         />
         <div className="mt-16">
           <OffersGrid audience="entreprises" />

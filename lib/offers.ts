@@ -1,7 +1,7 @@
 /**
  * Catalogue des offres d'Académie IA.
- * - Entreprises : parcours commercial (découverte → engagement → fidélité).
- * - Particuliers : formules grand public à tarif accessible.
+ * - Entreprises : audit gratuit → formation sur-mesure → accompagnement continu.
+ * - Particuliers : séance découverte → ateliers → coaching → pack complet.
  * Source unique de vérité, réutilisée sur l'accueil, /tarifs et /reservation.
  */
 
@@ -12,7 +12,7 @@ export interface Offer {
   id: string;
   audience: Audience;
   name: string;
-  /** Prix affiché tel quel (ex. « 49 € », « 300 à 600 € », « Sur devis »). */
+  /** Prix affiché tel quel (ex. « 49 € », « Sur devis », « Gratuit »). */
   price: string;
   duration: string;
   description: string;
@@ -25,101 +25,71 @@ export interface Offer {
 }
 
 export const offers: Offer[] = [
-  // === ENTREPRISES — parcours commercial ====================================
+  // === ENTREPRISES ==========================================================
   {
-    id: "essai-gratuit",
+    id: "audit-gratuit",
     audience: "entreprises",
-    name: "Essai gratuit",
-    price: "Offert",
-    duration: "7 à 14 jours · sans engagement",
-    description:
-      "Une période d'essai sans aucun engagement pour découvrir la qualité de l'accompagnement et construire la confiance.",
-    features: [
-      "Aucun engagement de départ",
-      "Accompagnement concret et représentatif",
-      "Idéal pour démarrer en toute confiance",
-    ],
-    badge: "Sans engagement",
-    cta: "Demander mon essai gratuit",
-  },
-  {
-    id: "echantillon-decouverte",
-    audience: "entreprises",
-    name: "Échantillon découverte",
-    price: "300 à 600 €",
-    duration: "7 à 14 jours",
-    description:
-      "Une période d'échantillonnage pour accéder à une prestation concrète et représentative, avec un investissement maîtrisé.",
-    features: [
-      "Tarif attractif selon la durée et le périmètre",
-      "Accès à une prestation concrète",
-      "Investissement limité et maîtrisé",
-    ],
-    cta: "Réserver l'échantillon",
-  },
-  {
-    id: "contrat-sans-engagement",
-    audience: "entreprises",
-    name: "Contrat sans engagement",
-    price: "Sur devis",
-    duration: "30 jours renouvelables",
-    description:
-      "Pour les clients qui recherchent de la flexibilité : résiliation possible à tout moment, sans pénalité ni préavis contraignant.",
-    features: [
-      "Base de 30 jours renouvelables",
-      "Résiliation à tout moment, sans pénalité",
-      "Réduit les freins et facilite l'entrée en relation",
-    ],
-    cta: "Demander un devis",
-  },
-  {
-    id: "contrat-avec-engagement",
-    audience: "entreprises",
-    name: "Contrat avec engagement",
-    price: "Sur devis",
-    duration: "6 à 12 mois",
-    description:
-      "Pour s'inscrire dans une relation stable et durable, avec une visibilité à long terme et des conditions avantageuses.",
-    features: [
-      "Durée d'engagement de 6 à 12 mois",
-      "Conditions tarifaires préférentielles négociables",
-      "Visibilité et stabilité à long terme",
-    ],
-    highlight: true,
-    badge: "Recommandé",
-    cta: "Demander un devis",
-  },
-  {
-    id: "offre-exclusivite",
-    audience: "entreprises",
-    name: "Offre d'exclusivité",
-    price: "Exclusif",
-    duration: "14 à 16 mois",
-    description:
-      "Les premiers clients fidèles bénéficient d'un accès prioritaire, voire unique, aux nouvelles offres avant toute ouverture au marché.",
-    features: [
-      "Accès prioritaire (voire unique) aux nouvelles offres",
-      "Assortie d'un engagement ferme",
-      "Exclusivité portée à 14-16 mois",
-      "Récompense les clients pionniers",
-    ],
-    badge: "Premiers clients",
-    cta: "Devenir client pionnier",
-  },
-
-  // === PARTICULIERS — formules grand public =================================
-  {
-    id: "essai-decouverte-particulier",
-    audience: "particuliers",
-    name: "Séance découverte",
-    price: "Offert",
+    name: "Audit IA gratuit",
+    price: "Gratuit",
     duration: "30 min · en visio",
     description:
-      "Un premier échange gratuit pour cerner votre besoin et vous montrer concrètement ce que l'IA peut faire pour vous.",
+      "Un premier échange pour comprendre votre activité, identifier vos cas d'usage prioritaires et voir ensemble ce que l'IA peut vous apporter concrètement.",
     features: [
       "Sans engagement",
-      "Conseils personnalisés",
-      "Pour savoir par où commencer",
+      "Bilan personnalisé de vos opportunités IA",
+      "Estimation concrète du temps gagnable",
+    ],
+    badge: "Sans engagement",
+    cta: "Réserver mon audit gratuit",
+  },
+  {
+    id: "formation-equipe",
+    audience: "entreprises",
+    name: "Formation équipe",
+    price: "Sur devis",
+    duration: "1 à 2 jours · présentiel ou visio",
+    description:
+      "Une formation concrète et personnalisée pour vos équipes, construite autour de vos vrais cas d'usage métier. Devis clair envoyé sous 24 h.",
+    features: [
+      "Programme adapté à votre secteur",
+      "Exercices sur vos propres dossiers",
+      "Support de formation inclus",
+      "Paiement unique à la prestation",
+    ],
+    highlight: true,
+    badge: "Le plus demandé",
+    cta: "Demander un devis",
+  },
+  {
+    id: "accompagnement-surmesure",
+    audience: "entreprises",
+    name: "Accompagnement sur-mesure",
+    price: "Sur devis",
+    duration: "Plusieurs sessions · à définir ensemble",
+    description:
+      "Un programme structuré sur plusieurs sessions pour un déploiement progressif de l'IA dans votre organisation, avec un suivi dans la durée.",
+    features: [
+      "Audit + formation + sessions de suivi",
+      "Rythme adapté à votre organisation",
+      "Ajustements selon vos retours",
+      "Interlocuteur dédié tout au long",
+    ],
+    cta: "Discuter de mon projet",
+  },
+
+  // === PARTICULIERS ==========================================================
+  {
+    id: "seance-decouverte",
+    audience: "particuliers",
+    name: "Séance découverte",
+    price: "Gratuit",
+    duration: "30 min · en visio",
+    description:
+      "Un premier échange pour voir ce que l'IA peut faire concrètement pour vous, sans jargon et sans engagement. On repart avec un plan d'action clair.",
+    features: [
+      "Sans engagement",
+      "Conseils personnalisés à votre situation",
+      "Pour savoir exactement par où commencer",
     ],
     badge: "Gratuit",
     cta: "Réserver ma séance",
@@ -127,11 +97,11 @@ export const offers: Offer[] = [
   {
     id: "atelier-collectif",
     audience: "particuliers",
-    name: "Atelier collectif en ligne",
+    name: "Atelier collectif",
     price: "49 €",
     duration: "2 h · en visio",
     description:
-      "Une session live pour découvrir l'IA, poser vos questions et repartir avec des automatismes simples.",
+      "Une session live pour découvrir les outils IA essentiels, poser vos questions et repartir avec des réflexes concrets utilisables dès le lendemain.",
     features: [
       "2 h en direct avec le formateur",
       "Démonstrations pas à pas",
@@ -143,15 +113,15 @@ export const offers: Offer[] = [
   {
     id: "cours-particulier",
     audience: "particuliers",
-    name: "Cours particulier en visio",
+    name: "Cours particulier",
     price: "75 €",
-    duration: "1 h · en visio individuelle",
+    duration: "1 h · individuel en visio",
     description:
-      "Un coaching individuel, 100 % adapté à votre objectif (recherche d'emploi, projet perso, productivité…).",
+      "Un coaching 100 % adapté à votre situation : recherche d'emploi, projet perso, productivité, rédaction… On avance vite sur ce qui compte pour vous.",
     features: [
       "1 h en tête-à-tête",
-      "Programme adapté à votre besoin",
-      "Prompts personnalisés",
+      "Programme centré sur votre objectif",
+      "Prompts personnalisés pour vous",
       "Conseils outils et méthode",
     ],
     highlight: true,
@@ -163,14 +133,14 @@ export const offers: Offer[] = [
     audience: "particuliers",
     name: "Pack Autonomie IA",
     price: "290 €",
-    duration: "5 h + support",
+    duration: "5 h · réparties en plusieurs séances",
     description:
-      "Un parcours complet pour devenir vraiment autonome avec l'IA, à votre rythme.",
+      "Un parcours complet pour devenir vraiment autonome avec l'IA. Cinq heures de formation personnalisée, à votre rythme et selon vos objectifs.",
     features: [
-      "5 h de formation personnalisée",
-      "Support entre les séances",
+      "5 h de formation individuelle",
+      "Support et échanges entre les séances",
       "Bibliothèque de prompts évolutive",
-      "Suivi de progression",
+      "Suivi de progression inclus",
     ],
     cta: "Choisir ce pack",
   },

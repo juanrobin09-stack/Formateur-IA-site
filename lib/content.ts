@@ -108,27 +108,27 @@ export const faq: FaqItem[] = [
   {
     question: "C'est en présentiel ou en distanciel ?",
     answer:
-      "Les deux. Les formations en entreprise se déroulent dans vos locaux ou en visio, selon vos préférences. Les offres particuliers se font en visio.",
+      "Les deux. Les formations en entreprise se déroulent dans vos locaux ou en visio selon vos préférences. Les offres particuliers se font exclusivement en visio.",
   },
   {
-    question: "Comment se déroule l'accompagnement ?",
+    question: "Comment ça se passe concrètement ?",
     answer:
-      "On commence toujours par une phase de découverte (essai gratuit ou échantillon de 7 à 14 jours) pour valider la qualité sans risque. Vous choisissez ensuite un contrat sans engagement (30 jours) ou avec engagement (6 à 12 mois), selon votre rythme.",
+      "On commence par un audit gratuit de 30 minutes pour cerner votre besoin. Vous recevez ensuite une proposition claire avec les tarifs. Si ça vous convient, on planifie la formation. Paiement unique à la prestation, sans abonnement.",
   },
   {
     question: "Sur quels outils formez-vous ?",
     answer:
-      "Sur tous les outils d'IA générative utiles à votre métier : ChatGPT, Claude, Gemini, Copilot, Perplexity, Midjourney et bien d'autres.",
+      "Sur tous les outils d'IA générative utiles à votre situation : ChatGPT, Claude, Gemini, Copilot, Perplexity, Midjourney et bien d'autres. On vous oriente vers les bons selon votre métier.",
   },
   {
-    question: "Proposez-vous du sur-mesure ?",
+    question: "Proposez-vous des formations sur-mesure pour les entreprises ?",
     answer:
-      "Oui. Nous concevons des programmes intra-entreprise entièrement adaptés à vos équipes, vos outils et vos objectifs. Demandez un devis.",
+      "Oui. Chaque programme entreprise est construit spécifiquement pour vos équipes, votre secteur et vos objectifs. Demandez un devis : on vous répond sous 24 h.",
   },
   {
-    question: "Et si je veux juste tester d'abord ?",
+    question: "Comment se passe le paiement ?",
     answer:
-      "C'est exactement l'idée de la phase Découverte : un essai gratuit ou un échantillon à petit prix (7 à 14 jours) pour vous faire une idée concrète, sans engagement, avant de vous décider.",
+      "Aucun paiement en ligne. Après votre demande, vous recevez un devis clair. Le règlement se fait par virement bancaire selon les modalités convenues ensemble, avant la prestation.",
   },
 ];
 
