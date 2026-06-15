@@ -133,11 +133,11 @@ export const offers: Offer[] = [
     audience: "particuliers",
     name: "Pack Autonomie IA",
     price: "290 €",
-    duration: "5 h · réparties en plusieurs séances",
+    duration: "5 h · à répartir comme vous voulez",
     description:
-      "Un parcours complet pour devenir vraiment autonome avec l'IA. Cinq heures de formation personnalisée, à votre rythme et selon vos objectifs.",
+      "Un parcours complet pour devenir vraiment autonome avec l'IA. Cinq heures de formation personnalisée, réparties librement selon votre rythme et vos objectifs.",
     features: [
-      "5 h de formation individuelle",
+      "5 h de formation individuelle, réparties à votre rythme",
       "Support et échanges entre les séances",
       "Bibliothèque de prompts évolutive",
       "Suivi de progression inclus",
