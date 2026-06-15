@@ -24,7 +24,7 @@ export function OffersByAudience() {
       audience: "entreprises",
       icon: Building2,
       title: "Pour les entreprises",
-      subtitle: "Un parcours de la découverte sans risque à la relation durable.",
+      subtitle: "De l'audit gratuit à l'accompagnement sur-mesure. Paiement unique à chaque prestation.",
     },
     {
       audience: "particuliers",

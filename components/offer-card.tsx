@@ -5,9 +5,13 @@ import type { Offer } from "@/lib/offers";
 
 /** Détermine la destination du CTA selon le type d'offre. */
 function ctaHref(offer: Offer): string {
-  // L'échantillon (prix fixe en €) passe par la prise de rendez-vous ;
-  // toutes les autres formules passent par le contact / devis.
-  return offer.price.includes("€")
+  // Particuliers : toutes les formules se réservent en visio via le calendrier.
+  if (offer.audience === "particuliers") {
+    return `/reservation?offer=${offer.id}`;
+  }
+  // Entreprises : l'audit gratuit se réserve directement, les formules sur
+  // devis passent par le formulaire de contact.
+  return offer.price === "Gratuit"
     ? `/reservation?offer=${offer.id}`
     : "/contact";
 }

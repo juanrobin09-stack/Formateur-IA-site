@@ -13,7 +13,7 @@ import { individualProfiles } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Formations IA pour particuliers",
   description:
-    "Apprenez à utiliser l'IA, sans connaissances techniques. Commencez par un essai gratuit, puis la formule qui vous convient. Pour indépendants, salariés, demandeurs d'emploi et curieux.",
+    "Apprenez à utiliser l'IA, sans connaissances techniques. Commencez par une séance découverte gratuite, puis choisissez la formule qui vous convient. Pour indépendants, salariés, demandeurs d'emploi et curieux.",
 };
 
 const formats = [
@@ -111,7 +111,7 @@ export default function ParticuliersPage() {
         <SectionHeading
           eyebrow="Nos formules"
           title="Commencez sans risque, à votre rythme"
-          subtitle="Un essai gratuit pour découvrir, puis la formule qui vous convient."
+          subtitle="Une séance découverte gratuite pour démarrer, puis la formule qui vous convient."
         />
         <div className="mt-16">
           <OffersGrid audience="particuliers" />
