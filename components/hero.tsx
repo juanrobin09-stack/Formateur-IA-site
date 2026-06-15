@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Sparkles, Calendar } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
 import { AudienceToggle } from "@/components/audience-offers";
+import { useAudience } from "@/components/home/audience-context";
 import { aiTools } from "@/lib/site";
 import type { Audience } from "@/lib/offers";
 
@@ -25,7 +25,7 @@ const heroCopy: Record<Audience, { subtitle: string; cta: string; href: string }
 
 /** Hero plein écran avec sélecteur de public. */
 export function Hero() {
-  const [audience, setAudience] = useState<Audience>("entreprises");
+  const { audience, setAudience } = useAudience();
   const copy = heroCopy[audience];
 
   return (
