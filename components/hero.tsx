@@ -8,14 +8,19 @@ import { useAudience } from "@/components/home/audience-context";
 import { aiTools } from "@/lib/site";
 import type { Audience } from "@/lib/offers";
 
-const heroCopy: Record<Audience, { subtitle: string; cta: string; href: string }> = {
+const heroCopy: Record<
+  Audience,
+  { titleEnd: string; subtitle: string; cta: string; href: string }
+> = {
   entreprises: {
+    titleEnd: "enfin utile à votre métier.",
     subtitle:
       "Formez vos équipes à l'IA générative et gagnez 5 à 10 heures par semaine. Des programmes 100 % personnalisés à votre métier.",
     cta: "Réserver un audit gratuit",
     href: "/contact",
   },
   particuliers: {
+    titleEnd: "enfin simple et accessible.",
     subtitle:
       "Apprenez à utiliser l'IA dès demain, sans connaissances techniques. Ateliers en ligne, cours particuliers en visio et pack autonomie.",
     cta: "Voir les offres particuliers",
@@ -62,7 +67,18 @@ export function Hero() {
           className="mt-7 max-w-3xl text-balance font-display text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-6xl md:text-7xl"
         >
           <span className="text-gradient">L&apos;intelligence artificielle, </span>
-          <span className="text-shine">enfin utile à votre métier.</span>
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={audience}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="text-shine inline-block"
+            >
+              {copy.titleEnd}
+            </motion.span>
+          </AnimatePresence>
         </motion.h1>
 
         <div className="mx-auto mt-5 min-h-[7rem] max-w-xl sm:min-h-[5.5rem]">
