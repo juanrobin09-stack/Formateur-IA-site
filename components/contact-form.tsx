@@ -124,9 +124,14 @@ export function ContactForm() {
             required
             defaultValue="entreprise"
             className={inputClasses}
+            style={{ colorScheme: "dark" }}
           >
-            <option value="entreprise">Une entreprise</option>
-            <option value="particulier">Un particulier</option>
+            <option value="entreprise" className="bg-ink text-white">
+              Une entreprise
+            </option>
+            <option value="particulier" className="bg-ink text-white">
+              Un particulier
+            </option>
           </select>
         </div>
       </div>
