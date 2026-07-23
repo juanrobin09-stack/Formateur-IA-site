@@ -1,7 +1,8 @@
 /**
  * Catalogue des offres d'Académie IA.
  * - Entreprises : formation sur-mesure → accompagnement continu.
- * - Particuliers : séance découverte → ateliers → coaching → pack complet.
+ * - Particuliers : séance découverte → ateliers → coaching → pack complet →
+ *   prestations sur-mesure (réalisées par le formateur, pas une formation).
  * Source unique de vérité, réutilisée sur l'accueil, /tarifs et /reservation.
  */
 
@@ -127,6 +128,22 @@ export const offers: Offer[] = [
       "Suivi de progression inclus",
     ],
     cta: "Choisir ce pack",
+  },
+  {
+    id: "prestation-surmesure",
+    audience: "particuliers",
+    name: "Prestation IA clé en main",
+    price: "Sur devis",
+    duration: "Selon le projet",
+    description:
+      "Vous avez un projet précis (CV, lettre de motivation, présentation, automatisation, contenu…) mais pas le temps ou l'envie de le faire vous-même ? Je le réalise pour vous avec l'IA.",
+    features: [
+      "Rédaction, contenu, automatisation…",
+      "Devis clair avant de démarrer",
+      "Livraison rapide",
+      "Résultat prêt à l'emploi",
+    ],
+    cta: "Décrire mon projet",
   },
 ];
 

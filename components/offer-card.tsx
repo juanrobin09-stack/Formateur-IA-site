@@ -5,12 +5,13 @@ import type { Offer } from "@/lib/offers";
 
 /** Détermine la destination du CTA selon le type d'offre. */
 function ctaHref(offer: Offer): string {
-  // Particuliers : toutes les formules se réservent en visio via le calendrier.
-  if (offer.audience === "particuliers") {
-    return `/reservation?offer=${offer.id}`;
+  // Offres sur devis (entreprises, ou prestations sur-mesure particuliers) :
+  // pas de créneau fixe à réserver, on démarre par un échange.
+  if (offer.price === "Sur devis") {
+    return "/contact";
   }
-  // Entreprises : toutes les formules passent par une demande de devis.
-  return "/contact";
+  // Toutes les autres formules ont un prix et une durée fixes : réservation directe.
+  return `/reservation?offer=${offer.id}`;
 }
 
 /** Carte d'offre réutilisable (tarifs, accueil, pages publics). */
