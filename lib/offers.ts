@@ -107,7 +107,7 @@ export const offers: Offer[] = [
       "1 h en tête-à-tête",
       "Programme centré sur votre objectif",
       "Visio : 75 € · présentiel : dès 85 € (Gironde/Libournais)",
-      "Prompts personnalisés pour vous",
+      "100% pratique, sur votre cas réel",
     ],
     highlight: true,
     badge: "Le plus demandé",
