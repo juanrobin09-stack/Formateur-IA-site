@@ -8,6 +8,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/cta";
 import { FaqSection } from "@/components/sections/faq";
 import { TestimonialsSection } from "@/components/sections/testimonials";
+import { PresentielPricingSection } from "@/components/sections/presentiel-pricing";
 import { individualProfiles } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -19,8 +20,9 @@ export const metadata: Metadata = {
 const formats = [
   {
     icon: Video,
-    title: "100 % en visio",
-    description: "Depuis chez vous, sans déplacement, avec un formateur en direct.",
+    title: "Visio ou à domicile",
+    description:
+      "Toutes les formules en visio depuis chez vous ; le cours particulier est aussi disponible à domicile en Gironde et dans le Libournais.",
   },
   {
     icon: Clock,
@@ -117,6 +119,8 @@ export default function ParticuliersPage() {
           <OffersGrid audience="particuliers" />
         </div>
       </Section>
+
+      <PresentielPricingSection />
 
       <TestimonialsSection />
 

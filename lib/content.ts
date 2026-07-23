@@ -108,7 +108,7 @@ export const faq: FaqItem[] = [
   {
     question: "C'est en présentiel ou en distanciel ?",
     answer:
-      "Les deux. Les formations en entreprise se déroulent dans vos locaux ou en visio selon vos préférences. Les offres particuliers se font exclusivement en visio.",
+      "Les deux. Les formations en entreprise se déroulent dans vos locaux ou en visio selon vos préférences. Pour les particuliers, l'atelier collectif et le pack se font en visio ; le cours particulier est aussi disponible à domicile en Gironde et dans le Libournais.",
   },
   {
     question: "Comment ça se passe concrètement ?",
@@ -195,6 +195,28 @@ export const sectorUseCases: SectorUseCase[] = [
     ],
   },
 ];
+
+export interface PresentielTier {
+  label: string;
+  price: string;
+}
+
+/**
+ * Tarifs du cours particulier, selon le format choisi.
+ * Le présentiel est réservé à la zone Gironde / Libournais (déplacement inclus).
+ */
+export const particulierPricing = {
+  visio: { label: "Visio — 1 h", price: "75 €" },
+  presentiel: {
+    note: "Déplacement inclus · Gironde, Libournais et alentours",
+    tiers: [
+      { label: "Moins de 15 km", price: "85 €" },
+      { label: "15 à 30 km", price: "95 €" },
+      { label: "30 à 50 km", price: "110 €" },
+      { label: "Plus de 50 km", price: "Sur devis" },
+    ] as PresentielTier[],
+  },
+};
 
 /** Publics particuliers ciblés (page Particuliers). */
 export const individualProfiles = [

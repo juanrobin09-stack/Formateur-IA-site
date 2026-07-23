@@ -115,14 +115,14 @@ export const offers: Offer[] = [
     audience: "particuliers",
     name: "Cours particulier",
     price: "75 €",
-    duration: "1 h · individuel en visio",
+    duration: "1 h · visio ou à domicile (Gironde/Libournais)",
     description:
       "Un coaching 100 % adapté à votre situation : recherche d'emploi, projet perso, productivité, rédaction… On avance vite sur ce qui compte pour vous.",
     features: [
       "1 h en tête-à-tête",
       "Programme centré sur votre objectif",
       "Prompts personnalisés pour vous",
-      "Conseils outils et méthode",
+      "Présentiel possible en Gironde/Libournais",
     ],
     highlight: true,
     badge: "Le plus demandé",
