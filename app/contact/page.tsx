@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contactez Académie IA pour réserver un audit gratuit, demander un devis ou poser vos questions sur nos formations IA.",
+    "Contactez Académie IA pour demander un devis ou poser vos questions sur nos formations IA.",
 };
 
 export default function ContactPage() {
@@ -19,7 +19,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Parlons de votre projet"
-        subtitle="Une question, un devis, un audit gratuit ? Écrivez-nous, nous répondons sous 24 h ouvrées."
+        subtitle="Une question, un devis ? Écrivez-nous, nous répondons sous 24 h ouvrées."
       />
 
       <Section>
@@ -95,8 +95,8 @@ export default function ContactPage() {
                   <span className="text-sm font-medium">Plus rapide</span>
                 </div>
                 <p className="mt-2 text-sm text-white/65">
-                  Réservez directement un créneau pour votre audit gratuit ou
-                  votre formation.
+                  Réservez directement un créneau pour votre cours ou votre
+                  formation.
                 </p>
                 <ButtonLink href="/reservation" className="mt-4" size="md">
                   Réserver un créneau

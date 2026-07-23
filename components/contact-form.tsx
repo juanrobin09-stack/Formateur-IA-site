@@ -53,8 +53,8 @@ export function ContactForm() {
           Message envoyé, merci !
         </h3>
         <p className="mt-2 max-w-sm text-sm text-white/60">
-          Nous revenons vers vous très vite. En attendant, n&apos;hésitez pas à
-          réserver directement un créneau pour votre audit gratuit.
+          Nous revenons vers vous très vite avec une réponse claire à votre
+          demande.
         </p>
         <button
           type="button"

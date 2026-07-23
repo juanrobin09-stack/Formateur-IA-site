@@ -36,9 +36,9 @@ const benefits = [
   },
   {
     icon: ShieldCheck,
-    title: "Sans risque",
+    title: "Sans surprise",
     description:
-      "On commence par un audit gratuit pour valider le retour sur investissement.",
+      "Un devis clair avant toute prestation : vous savez exactement ce que vous payez.",
   },
   {
     icon: Target,
@@ -58,7 +58,7 @@ export default function EntreprisesPage() {
       >
         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           <ButtonLink href="/contact" size="lg">
-            Réserver un audit gratuit
+            Demander un devis
             <ArrowRight size={18} />
           </ButtonLink>
           <ButtonLink href="#offres" variant="secondary" size="lg">
@@ -169,7 +169,7 @@ export default function EntreprisesPage() {
         <SectionHeading
           eyebrow="Nos formules"
           title="Un parcours adapté à vos équipes"
-          subtitle="Audit gratuit · Formation sur-mesure · Accompagnement continu. Paiement unique à chaque prestation."
+          subtitle="Formation sur-mesure · Accompagnement continu. Paiement unique à chaque prestation, sur devis."
         />
         <div className="mt-16">
           <OffersGrid audience="entreprises" />
@@ -178,10 +178,7 @@ export default function EntreprisesPage() {
 
       <FinalCta
         title="Parlons de votre projet"
-        subtitle="Un audit gratuit de 30 minutes pour identifier vos cas d'usage prioritaires et estimer votre retour sur investissement."
-        primaryLabel="Réserver un audit gratuit"
-        secondaryLabel="Demander un devis"
-        secondaryHref="/contact"
+        subtitle="Décrivez-nous votre besoin, nous vous envoyons une proposition claire sous 24 h."
       />
     </>
   );

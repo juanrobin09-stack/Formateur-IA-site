@@ -16,7 +16,7 @@ const heroCopy: Record<
     titleEnd: "enfin utile à votre métier.",
     subtitle:
       "Formez vos équipes à l'IA générative et gagnez 5 à 10 heures par semaine. Des programmes 100 % personnalisés à votre métier.",
-    cta: "Réserver un audit gratuit",
+    cta: "Demander un devis",
     href: "/contact",
   },
   particuliers: {

@@ -1,6 +1,6 @@
 /**
  * Catalogue des offres d'Académie IA.
- * - Entreprises : audit gratuit → formation sur-mesure → accompagnement continu.
+ * - Entreprises : formation sur-mesure → accompagnement continu.
  * - Particuliers : séance découverte → ateliers → coaching → pack complet.
  * Source unique de vérité, réutilisée sur l'accueil, /tarifs et /reservation.
  */
@@ -26,22 +26,6 @@ export interface Offer {
 
 export const offers: Offer[] = [
   // === ENTREPRISES ==========================================================
-  {
-    id: "audit-gratuit",
-    audience: "entreprises",
-    name: "Audit IA gratuit",
-    price: "Gratuit",
-    duration: "30 min · en visio",
-    description:
-      "Un premier échange pour comprendre votre activité, identifier vos cas d'usage prioritaires et voir ensemble ce que l'IA peut vous apporter concrètement.",
-    features: [
-      "Sans engagement",
-      "Bilan personnalisé de vos opportunités IA",
-      "Estimation concrète du temps gagnable",
-    ],
-    badge: "Sans engagement",
-    cta: "Réserver mon audit gratuit",
-  },
   {
     id: "formation-equipe",
     audience: "entreprises",
@@ -69,7 +53,7 @@ export const offers: Offer[] = [
     description:
       "Un programme structuré sur plusieurs sessions pour un déploiement progressif de l'IA dans votre organisation, avec un suivi dans la durée.",
     features: [
-      "Audit + formation + sessions de suivi",
+      "Diagnostic initial + formation + sessions de suivi",
       "Rythme adapté à votre organisation",
       "Ajustements selon vos retours",
       "Interlocuteur dédié tout au long",

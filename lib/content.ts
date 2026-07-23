@@ -47,9 +47,9 @@ export const reasons = [
 /** Comment ça marche, en 4 étapes. */
 export const steps = [
   {
-    title: "Audit gratuit",
+    title: "Premier échange",
     description:
-      "30 minutes pour comprendre votre métier et repérer vos cas d'usage IA prioritaires.",
+      "On discute de votre besoin, votre métier et vos objectifs, pour identifier la formule adaptée.",
   },
   {
     title: "Programme sur-mesure",
@@ -113,7 +113,7 @@ export const faq: FaqItem[] = [
   {
     question: "Comment ça se passe concrètement ?",
     answer:
-      "On commence par un audit gratuit de 30 minutes pour cerner votre besoin. Vous recevez ensuite une proposition claire avec les tarifs. Si ça vous convient, on planifie la formation. Paiement unique à la prestation, sans abonnement.",
+      "Vous nous contactez avec votre besoin. Vous recevez ensuite une proposition claire avec les tarifs. Si ça vous convient, on planifie la formation. Paiement unique à la prestation, sans abonnement.",
   },
   {
     question: "Sur quels outils formez-vous ?",

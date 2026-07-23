@@ -75,8 +75,8 @@ export function Reservation() {
           Choisissez votre créneau
         </h2>
         <p className="mb-5 mt-2 text-sm text-white/60">
-          Réservez votre rendez-vous (audit, atelier ou formation) directement
-          dans le calendrier ci-dessous. C&apos;est gratuit et sans engagement.
+          Réservez votre rendez-vous (atelier, cours ou formation) directement
+          dans le calendrier ci-dessous.
         </p>
         <CalendlyEmbed />
       </div>
@@ -90,7 +90,7 @@ export function Reservation() {
           <ol className="mt-4 space-y-3 text-sm text-white/70">
             {[
               "Vous choisissez un créneau qui vous arrange.",
-              "On échange sur votre besoin (audit gratuit de 30 min).",
+              "On échange sur votre besoin.",
               "Vous recevez une proposition claire, sans surprise.",
               "On planifie la formation, en présentiel ou en visio.",
             ].map((s, i) => (

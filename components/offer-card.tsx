@@ -9,11 +9,8 @@ function ctaHref(offer: Offer): string {
   if (offer.audience === "particuliers") {
     return `/reservation?offer=${offer.id}`;
   }
-  // Entreprises : l'audit gratuit se réserve directement, les formules sur
-  // devis passent par le formulaire de contact.
-  return offer.price === "Gratuit"
-    ? `/reservation?offer=${offer.id}`
-    : "/contact";
+  // Entreprises : toutes les formules passent par une demande de devis.
+  return "/contact";
 }
 
 /** Carte d'offre réutilisable (tarifs, accueil, pages publics). */

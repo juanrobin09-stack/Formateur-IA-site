@@ -8,7 +8,7 @@ export function StepsSection() {
     <Section className="bg-white/[0.02]">
       <SectionHeading
         eyebrow="Comment ça marche"
-        title="De l'audit à l'autonomie, en 4 étapes"
+        title="De votre demande à l'autonomie, en 4 étapes"
         subtitle="Un parcours simple et balisé, pensé pour des résultats rapides et durables."
       />
 

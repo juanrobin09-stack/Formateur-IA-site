@@ -5,8 +5,8 @@ import { Reveal } from "@/components/reveal";
 /** Bandeau d'appel à l'action final, réutilisable. */
 export function FinalCta({
   title = "Prêt à mettre l'IA au service de votre métier ?",
-  subtitle = "Commencez par un audit gratuit de 30 minutes. Sans engagement, et déjà utile.",
-  primaryLabel = "Réserver mon audit gratuit",
+  subtitle = "Décrivez-nous votre besoin, nous vous envoyons une proposition claire sous 24 h.",
+  primaryLabel = "Demander un devis",
   primaryHref = "/contact",
   secondaryLabel = "Voir les tarifs",
   secondaryHref = "/tarifs",

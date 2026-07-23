@@ -24,7 +24,7 @@ export function OffersByAudience() {
       audience: "entreprises",
       icon: Building2,
       title: "Pour les entreprises",
-      subtitle: "De l'audit gratuit à l'accompagnement sur-mesure. Paiement unique à chaque prestation.",
+      subtitle: "Formation sur-mesure ou accompagnement continu. Paiement unique à chaque prestation, sur devis.",
     },
     {
       audience: "particuliers",

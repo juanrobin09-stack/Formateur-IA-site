@@ -16,7 +16,7 @@ const articles = [
   },
   {
     title: "Article 2 — Prestations",
-    body: "Les prestations comprennent des audits, ateliers, formations et programmes d'accompagnement à l'usage de l'intelligence artificielle, en présentiel ou à distance, selon les modalités décrites sur le site et précisées dans le devis ou la convention de formation.",
+    body: "Les prestations comprennent des ateliers, formations et programmes d'accompagnement à l'usage de l'intelligence artificielle, en présentiel ou à distance, selon les modalités décrites sur le site et précisées dans le devis ou la convention de formation.",
   },
   {
     title: "Article 3 — Tarifs",

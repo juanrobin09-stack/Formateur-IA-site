@@ -71,7 +71,7 @@ export function Navbar() {
             Réserver
           </ButtonLink>
           <ButtonLink href="/contact" size="md">
-            Audit gratuit
+            Demander un devis
           </ButtonLink>
         </div>
 
@@ -137,7 +137,7 @@ export function Navbar() {
                 className="mt-4 flex flex-col gap-2.5 border-t border-white/10 pt-4"
               >
                 <ButtonLink href="/contact" size="lg" className="w-full">
-                  Réserver un audit gratuit
+                  Demander un devis
                   <ArrowRight size={18} />
                 </ButtonLink>
                 <ButtonLink
