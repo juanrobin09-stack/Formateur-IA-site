@@ -8,7 +8,6 @@ import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/cta";
 import { FaqSection } from "@/components/sections/faq";
 import { TestimonialsSection } from "@/components/sections/testimonials";
-import { PresentielPricingSection } from "@/components/sections/presentiel-pricing";
 import { individualProfiles } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -119,8 +118,6 @@ export default function ParticuliersPage() {
           <OffersGrid audience="particuliers" />
         </div>
       </Section>
-
-      <PresentielPricingSection />
 
       <TestimonialsSection />
 

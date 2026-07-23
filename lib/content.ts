@@ -196,28 +196,6 @@ export const sectorUseCases: SectorUseCase[] = [
   },
 ];
 
-export interface PresentielTier {
-  label: string;
-  price: string;
-}
-
-/**
- * Tarifs du cours particulier, selon le format choisi.
- * Le présentiel est réservé à la zone Gironde / Libournais (déplacement inclus).
- */
-export const particulierPricing = {
-  visio: { label: "Visio — 1 h", price: "75 €" },
-  presentiel: {
-    note: "Déplacement inclus · Gironde, Libournais et alentours",
-    tiers: [
-      { label: "Moins de 15 km", price: "85 €" },
-      { label: "15 à 30 km", price: "95 €" },
-      { label: "30 à 50 km", price: "110 €" },
-      { label: "Plus de 50 km", price: "Sur devis" },
-    ] as PresentielTier[],
-  },
-};
-
 /** Publics particuliers ciblés (page Particuliers). */
 export const individualProfiles = [
   {
