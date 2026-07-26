@@ -1,6 +1,7 @@
-import { Quote, Star } from "lucide-react";
+import { ArrowRight, Quote, Star } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/reveal";
+import { ButtonLink } from "@/components/ui/button";
 import { testimonials } from "@/lib/content";
 
 /** Section témoignages (preuve sociale). */
@@ -40,6 +41,13 @@ export function TestimonialsSection() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal className="mt-10 flex justify-center">
+        <ButtonLink href="/avis" variant="secondary" size="md">
+          Voir tous les avis · Laisser le mien
+          <ArrowRight size={16} />
+        </ButtonLink>
+      </Reveal>
     </Section>
   );
 }
