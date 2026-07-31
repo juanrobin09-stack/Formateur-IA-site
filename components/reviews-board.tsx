@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   Star,
   Send,
   Loader2,
   AlertCircle,
   CheckCircle2,
+  Trash2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { clsx } from "@/lib/clsx";
@@ -55,6 +57,46 @@ export function ReviewsBoard({ initialReviews }: { initialReviews: Review[] }) {
   const [error, setError] = useState("");
   const [rating, setRating] = useState(5);
   const [role, setRole] = useState<"particulier" | "entreprise">("particulier");
+
+  // Mode admin (?admin=1) : permet au propriétaire du site de supprimer un
+  // avis directement depuis la page, avec un jeton secret (REVIEWS_ADMIN_TOKEN).
+  const searchParams = useSearchParams();
+  const isAdmin = searchParams.get("admin") === "1";
+  const [adminToken, setAdminToken] = useState("");
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isAdmin) {
+      setAdminToken(sessionStorage.getItem("reviewsAdminToken") || "");
+    }
+  }, [isAdmin]);
+
+  function saveAdminToken(value: string) {
+    setAdminToken(value);
+    sessionStorage.setItem("reviewsAdminToken", value);
+  }
+
+  async function handleDelete(id: string) {
+    if (!confirm("Supprimer définitivement cet avis ?")) return;
+    setDeletingId(id);
+    try {
+      const res = await fetch("/api/reviews", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, token: adminToken }),
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        alert(json.error || "La suppression a échoué.");
+        return;
+      }
+      setReviews((prev) => prev.filter((r) => r.id !== id));
+    } catch {
+      alert("La suppression a échoué.");
+    } finally {
+      setDeletingId(null);
+    }
+  }
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -225,13 +267,43 @@ export function ReviewsBoard({ initialReviews }: { initialReviews: Review[] }) {
 
       {/* Liste des avis */}
       <div className="space-y-5">
+        {isAdmin && (
+          <div className="rounded-2xl border border-amber-400/30 bg-amber-400/10 p-4">
+            <p className="text-xs font-medium text-amber-200">
+              Mode admin — collez votre jeton pour pouvoir supprimer un avis.
+            </p>
+            <input
+              type="password"
+              value={adminToken}
+              onChange={(e) => saveAdminToken(e.target.value)}
+              placeholder="REVIEWS_ADMIN_TOKEN"
+              className={`${inputClasses} mt-2`}
+            />
+          </div>
+        )}
+
         {reviews.length === 0 && (
           <p className="text-sm text-white/50">
             Aucun avis pour le moment. Soyez le premier à en laisser un !
           </p>
         )}
         {reviews.map((r) => (
-          <figure key={r.id} className="rounded-2xl glass p-6">
+          <figure key={r.id} className="relative rounded-2xl glass p-6">
+            {isAdmin && (
+              <button
+                type="button"
+                onClick={() => handleDelete(r.id)}
+                disabled={deletingId === r.id}
+                aria-label={`Supprimer l'avis de ${r.name}`}
+                className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-lg border border-red-500/30 bg-red-500/10 text-red-300 transition-colors hover:bg-red-500/20 disabled:opacity-50"
+              >
+                {deletingId === r.id ? (
+                  <Loader2 size={14} className="animate-spin" />
+                ) : (
+                  <Trash2 size={14} />
+                )}
+              </button>
+            )}
             <div className="flex items-center justify-between gap-3">
               <div className="flex gap-0.5" aria-label={`${r.rating} sur 5`}>
                 {Array.from({ length: 5 }).map((_, i) => (

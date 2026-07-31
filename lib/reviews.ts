@@ -188,3 +188,14 @@ export async function addReview(
 
   return { persisted: false, review: fallbackReview };
 }
+
+/** Supprime un avis par son id. Retourne false si aucune base n'est configurée. */
+export async function deleteReview(id: string): Promise<boolean> {
+  if (!connectionString()) {
+    return false;
+  }
+  const pool = getPool();
+  await ensureTable(pool);
+  const result = await pool.query("DELETE FROM reviews WHERE id = $1", [id]);
+  return (result.rowCount ?? 0) > 0;
+}

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { addReview } from "@/lib/reviews";
+import { addReview, deleteReview } from "@/lib/reviews";
 
 /**
  * Route API du formulaire d'avis.
@@ -63,6 +63,50 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true, persisted, review });
   } catch (err) {
     console.error("[reviews] Exception :", err);
+    return NextResponse.json(
+      { error: "Une erreur interne est survenue." },
+      { status: 500 }
+    );
+  }
+}
+
+/**
+ * Suppression d'un avis. Réservée au propriétaire du site : protégée par un
+ * jeton secret (REVIEWS_ADMIN_TOKEN), à saisir depuis /avis?admin=1.
+ */
+export async function DELETE(request: Request) {
+  let body: { id?: string; token?: string };
+  try {
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Requête invalide." }, { status: 400 });
+  }
+
+  const adminToken = process.env.REVIEWS_ADMIN_TOKEN;
+  if (!adminToken) {
+    return NextResponse.json(
+      { error: "Suppression non configurée (REVIEWS_ADMIN_TOKEN absent)." },
+      { status: 501 }
+    );
+  }
+  if (!body.token || body.token !== adminToken) {
+    return NextResponse.json({ error: "Jeton invalide." }, { status: 401 });
+  }
+  if (!body.id?.trim()) {
+    return NextResponse.json({ error: "Identifiant manquant." }, { status: 400 });
+  }
+
+  try {
+    const removed = await deleteReview(body.id.trim());
+    if (!removed) {
+      return NextResponse.json(
+        { error: "Avis introuvable." },
+        { status: 404 }
+      );
+    }
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error("[reviews] Exception suppression :", err);
     return NextResponse.json(
       { error: "Une erreur interne est survenue." },
       { status: 500 }
