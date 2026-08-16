@@ -135,14 +135,17 @@ export const faq: FaqItem[] = [
 export interface SectorUseCase {
   icon: LucideIcon;
   sector: string;
+  /** Identifiant d'URL de la page dédiée : /entreprises/[slug]. */
+  slug: string;
   useCases: string[];
 }
 
-/** Cas d'usage par secteur (page Entreprises). */
+/** Cas d'usage par secteur (page Entreprises), chacun avec sa page dédiée /entreprises/[slug]. */
 export const sectorUseCases: SectorUseCase[] = [
   {
     icon: Home,
     sector: "Immobilier",
+    slug: "immobilier",
     useCases: [
       "Rédiger des annonces percutantes en quelques secondes",
       "Préparer les visites et les relances clients",
@@ -152,6 +155,7 @@ export const sectorUseCases: SectorUseCase[] = [
   {
     icon: UtensilsCrossed,
     sector: "Restauration",
+    slug: "restauration",
     useCases: [
       "Créer menus, cartes et fiches plats",
       "Gérer les avis clients et les réseaux sociaux",
@@ -161,6 +165,7 @@ export const sectorUseCases: SectorUseCase[] = [
   {
     icon: HardHat,
     sector: "BTP",
+    slug: "btp",
     useCases: [
       "Rédiger devis et comptes-rendus de chantier",
       "Répondre plus vite aux appels d'offres",
@@ -170,6 +175,7 @@ export const sectorUseCases: SectorUseCase[] = [
   {
     icon: Hammer,
     sector: "Artisans",
+    slug: "artisans",
     useCases: [
       "Automatiser les devis et factures",
       "Communiquer simplement sur vos réalisations",
@@ -179,6 +185,7 @@ export const sectorUseCases: SectorUseCase[] = [
   {
     icon: Store,
     sector: "Commerce",
+    slug: "commerce",
     useCases: [
       "Fiches produits et descriptions optimisées",
       "Campagnes marketing et e-mailing",
@@ -188,6 +195,7 @@ export const sectorUseCases: SectorUseCase[] = [
   {
     icon: Stethoscope,
     sector: "Professions libérales",
+    slug: "professions-liberales",
     useCases: [
       "Synthèses de dossiers et comptes-rendus",
       "Rédaction de courriers et de documents",

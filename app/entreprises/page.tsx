@@ -61,7 +61,7 @@ export default function EntreprisesPage() {
       <PageHeader
         eyebrow="Entreprises & PME"
         title="L'IA au service de votre entreprise"
-        subtitle="Des formations concrètes et personnalisées pour rendre vos équipes autonomes sur l'IA générative — et gagner un temps précieux."
+        subtitle="Dirigeants, RH, managers : des formations concrètes et personnalisées pour rendre vos équipes autonomes sur l'IA générative, et gagner un temps précieux."
         breadcrumb={[{ name: "Entreprises", path: "/entreprises" }]}
       >
         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -116,7 +116,10 @@ export default function EntreprisesPage() {
             const Icon = sector.icon;
             return (
               <Reveal key={sector.sector} delay={i * 0.05}>
-                <div className="h-full rounded-2xl glass p-6">
+                <Link
+                  href={`/entreprises/${sector.slug}`}
+                  className="group flex h-full flex-col rounded-2xl glass-hover p-6"
+                >
                   <div className="flex items-center gap-3">
                     <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-600/15 text-brand-400">
                       <Icon size={20} />
@@ -139,7 +142,14 @@ export default function EntreprisesPage() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand-400">
+                    Voir la page {sector.sector}
+                    <ArrowRight
+                      size={15}
+                      className="transition-transform group-hover:translate-x-1"
+                    />
+                  </span>
+                </Link>
               </Reveal>
             );
           })}
@@ -150,7 +160,14 @@ export default function EntreprisesPage() {
             <Link href="/formations/chatgpt" className="text-brand-400 underline-offset-4 hover:underline">
               ChatGPT
             </Link>
-            , l&apos;outil IA le plus utilisé en entreprise aujourd&apos;hui.
+            , l&apos;outil IA le plus utilisé en entreprise aujourd&apos;hui. À lire aussi :{" "}
+            <Link
+              href="/blog/former-salaries-intelligence-artificielle"
+              className="text-brand-400 underline-offset-4 hover:underline"
+            >
+              comment former ses salariés à l&apos;intelligence artificielle
+            </Link>
+            .
           </p>
         </Reveal>
       </Section>

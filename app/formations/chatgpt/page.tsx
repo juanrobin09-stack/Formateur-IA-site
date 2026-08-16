@@ -6,6 +6,10 @@ import {
   Briefcase,
   PenLine,
   Search,
+  AlertTriangle,
+  ShieldAlert,
+  RefreshCw,
+  HelpCircle,
 } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Section, SectionHeading } from "@/components/ui/section";
@@ -46,6 +50,33 @@ const skills = [
     title: "L'intégrer à votre quotidien",
     description:
       "Des réflexes simples pour gagner du temps chaque semaine, sans bouleverser vos habitudes de travail.",
+  },
+];
+
+const mistakes = [
+  {
+    icon: AlertTriangle,
+    title: "Faire confiance sans vérifier",
+    description:
+      "ChatGPT peut se tromper avec assurance. Sur un fait précis, une date ou un chiffre, le réflexe de vérifier reste indispensable.",
+  },
+  {
+    icon: HelpCircle,
+    title: "Rester trop vague dans la demande",
+    description:
+      "Plus le contexte donné est précis (votre métier, votre destinataire, le ton souhaité), plus la réponse est directement exploitable.",
+  },
+  {
+    icon: ShieldAlert,
+    title: "Partager des informations sensibles",
+    description:
+      "Données clients, informations confidentielles de l'entreprise : on apprend à identifier ce qu'il vaut mieux ne pas transmettre.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Abandonner après une seule mauvaise réponse",
+    description:
+      "Reformuler, préciser, corriger : la conversation s'affine. La première réponse est rarement la meilleure, et c'est normal.",
   },
 ];
 
@@ -196,6 +227,47 @@ export default function FormationChatGptPage() {
             </div>
           </Reveal>
         </div>
+      </Section>
+
+      {/* Erreurs fréquentes */}
+      <Section>
+        <SectionHeading
+          eyebrow="Conseils"
+          title="Les erreurs les plus fréquentes avec ChatGPT"
+          subtitle="Ce qu'on corrige en premier, quel que soit votre niveau de départ."
+        />
+        <div className="mt-16 grid gap-6 sm:grid-cols-2">
+          {mistakes.map((m, i) => {
+            const Icon = m.icon;
+            return (
+              <Reveal key={m.title} delay={i * 0.06}>
+                <div className="h-full rounded-2xl glass p-6">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600/15 text-brand-400">
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="mt-5 font-display text-lg font-semibold">
+                    {m.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">
+                    {m.description}
+                  </p>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
+        <Reveal className="mt-10 text-center">
+          <p className="text-sm text-white/50">
+            Pour aller plus loin, notre article{" "}
+            <Link
+              href="/blog/comment-utiliser-chatgpt-au-travail"
+              className="text-brand-400 underline-offset-4 hover:underline"
+            >
+              Comment utiliser ChatGPT au travail
+            </Link>{" "}
+            détaille ces bonnes pratiques.
+          </p>
+        </Reveal>
       </Section>
 
       {/* FAQ ChatGPT */}

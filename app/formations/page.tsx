@@ -143,6 +143,22 @@ export default function FormationsPage() {
         </div>
       </Section>
 
+      {/* Ressources */}
+      <Section>
+        <Reveal className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+          <h2 className="font-display text-2xl font-semibold sm:text-3xl">
+            Envie de vous informer avant de vous lancer ?
+          </h2>
+          <p className="text-white/60">
+            Retrouvez nos guides pratiques sur l&apos;IA et ChatGPT sur le{" "}
+            <Link href="/blog" className="text-brand-400 underline-offset-4 hover:underline">
+              blog Académie IA
+            </Link>
+            .
+          </p>
+        </Reveal>
+      </Section>
+
       <Section className="bg-white/[0.02]">
         <Reveal className="mx-auto flex max-w-2xl flex-col items-center gap-6 text-center">
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">

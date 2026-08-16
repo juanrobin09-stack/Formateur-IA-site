@@ -94,7 +94,14 @@ export default function ParticuliersPage() {
             <Link href="/formations/chatgpt" className="text-brand-400 underline-offset-4 hover:underline">
               apprendre ChatGPT
             </Link>{" "}
-            ? C&apos;est justement le cœur de nos formations.
+            ? C&apos;est justement le cœur de nos formations. Vous partez de zéro ? Notre guide{" "}
+            <Link
+              href="/blog/apprendre-intelligence-artificielle-debutant"
+              className="text-brand-400 underline-offset-4 hover:underline"
+            >
+              comment apprendre l&apos;intelligence artificielle quand on débute
+            </Link>{" "}
+            est fait pour vous.
           </p>
         </Reveal>
       </Section>
