@@ -11,10 +11,12 @@ export const site = {
   slogan: "L'intelligence artificielle, enfin utile à votre métier.",
   baseline:
     "Passez de « l'IA c'est flou » à « je l'utilise dès demain ». Des formations 100 % personnalisées à votre métier.",
-  // Domaine réel de production (académie-ia.com, forme Punycode car le "é"
-  // n'est pas un caractère ASCII). Surchargeable via NEXT_PUBLIC_SITE_URL —
-  // vérifiez que cette variable est bien définie sur Vercel avec la même valeur.
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://xn--acadmie-ia-e7a.com",
+  // Domaine réel de production (www.académie-ia.com, forme Punycode car le "é"
+  // n'est pas un caractère ASCII — c'est la même adresse, juste encodée pour
+  // le DNS). Le site sert réellement sur le sous-domaine "www". Surchargeable
+  // via NEXT_PUBLIC_SITE_URL — vérifiez que cette variable est bien définie
+  // sur Vercel avec exactement cette même valeur (avec le www).
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.xn--acadmie-ia-e7a.com",
 
   // --- Coordonnées ----------------------------------------------------------
   contact: {
