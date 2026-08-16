@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Home, ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
-import { Home } from "lucide-react";
+
+// Next.js injecte déjà automatiquement un <meta name="robots" content="noindex">
+// sur cette page (en plus du vrai statut HTTP 404) : inutile de le redéfinir
+// ici, ça créerait une deuxième balise robots dupliquée.
+export const metadata: Metadata = {
+  title: "Page introuvable",
+};
+
+const usefulLinks = [
+  { href: "/entreprises", label: "Formations entreprises" },
+  { href: "/particuliers", label: "Formations particuliers" },
+  { href: "/tarifs", label: "Tarifs" },
+  { href: "/contact", label: "Nous contacter" },
+];
 
 export default function NotFound() {
   return (
@@ -12,10 +28,25 @@ export default function NotFound() {
         La page que vous cherchez n&apos;existe pas ou a été déplacée.
         Retournons à l&apos;essentiel.
       </p>
+
       <ButtonLink href="/" size="lg" className="mt-8">
         <Home size={18} />
         Retour à l&apos;accueil
       </ButtonLink>
+
+      <ul className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        {usefulLinks.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="inline-flex items-center gap-1 text-sm text-white/50 transition-colors hover:text-white"
+            >
+              {link.label}
+              <ArrowRight size={13} />
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Mail, Phone, MapPin, Calendar } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/ui/section";
@@ -6,12 +5,14 @@ import { Reveal } from "@/components/reveal";
 import { ContactForm } from "@/components/contact-form";
 import { ButtonLink } from "@/components/ui/button";
 import { site } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description:
-    "Contactez Académie IA pour demander un devis ou poser vos questions sur nos formations IA.",
-};
+    "Contactez Académie IA pour demander un devis de formation IA entreprise, réserver un cours particulier ou poser vos questions. Réponse sous 24 h.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -20,6 +21,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Parlons de votre projet"
         subtitle="Une question, un devis ? Écrivez-nous, nous répondons sous 24 h ouvrées."
+        breadcrumb={[{ name: "Contact", path: "/contact" }]}
       />
 
       <Section>

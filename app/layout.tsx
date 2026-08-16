@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
+import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -51,9 +53,9 @@ export const metadata: Metadata = {
     title: `${site.name} — ${site.slogan}`,
     description: site.baseline,
   },
-  alternates: {
-    canonical: site.url,
-  },
+  // Pas de canonical ici : chaque page définit le sien via pageMetadata()
+  // (lib/seo.ts). Un canonical global pointerait à tort toutes les pages
+  // vers l'accueil.
   robots: {
     index: true,
     follow: true,
@@ -81,6 +83,8 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${fraunces.variable}`}>
       <body className="flex min-h-screen flex-col">
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={websiteJsonLd()} />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

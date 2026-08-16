@@ -1,16 +1,18 @@
-import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/ui/section";
 import { Reveal } from "@/components/reveal";
 import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/cta";
+import { site } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "À propos",
+export const metadata = pageMetadata({
+  title: "À propos d'Académie IA",
   description:
-    "Le manifeste d'Académie IA : nos convictions sur une intelligence artificielle utile, honnête et accessible à tous.",
-};
+    "Le manifeste d'Académie IA : nos convictions sur une intelligence artificielle utile, honnête et accessible à tous, portées par son fondateur Juan Robin.",
+  path: "/a-propos",
+});
 
 /** Les convictions qui composent le manifeste. */
 const manifesto = [
@@ -47,6 +49,7 @@ export default function AProposPage() {
         eyebrow="Manifeste"
         title="Ce en quoi nous croyons"
         subtitle="Académie IA est née d'un constat. La plupart des professionnels entendent parler d'intelligence artificielle sans jamais voir comment l'appliquer à leur métier. Nous existons pour combler ce fossé."
+        breadcrumb={[{ name: "À propos", path: "/a-propos" }]}
       >
         <ButtonLink href="/contact" size="lg">
           Discutons de votre projet
@@ -84,6 +87,14 @@ export default function AProposPage() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal delay={0.1}>
+            <p className="mt-14 border-t border-white/10 pt-8 text-sm text-white/50">
+              Académie IA est porté par{" "}
+              <span className="text-white/80">{site.legal.director}</span>,{" "}
+              {site.legal.statut.toLowerCase()} basé en Gironde.
+            </p>
+          </Reveal>
         </div>
       </Section>
 

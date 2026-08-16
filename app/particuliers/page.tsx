@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight, Video, Clock, Heart } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Section, SectionHeading } from "@/components/ui/section";
@@ -8,13 +8,17 @@ import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/cta";
 import { FaqSection } from "@/components/sections/faq";
 import { TestimonialsSection } from "@/components/sections/testimonials";
+import { JsonLd } from "@/components/seo/json-ld";
 import { individualProfiles } from "@/lib/content";
+import { offersByAudience } from "@/lib/offers";
+import { pageMetadata, coursesJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Formations IA pour particuliers",
+export const metadata = pageMetadata({
+  title: "Formation IA pour particuliers : apprendre l'intelligence artificielle",
   description:
-    "Apprenez à utiliser l'IA, sans connaissances techniques. Commencez par une séance découverte gratuite, puis choisissez la formule qui vous convient. Pour indépendants, salariés, demandeurs d'emploi et curieux.",
-};
+    "Apprenez à utiliser l'IA et ChatGPT sans connaissances techniques : séance découverte gratuite, ateliers collectifs, cours particuliers en visio ou à domicile. Pour indépendants, salariés et demandeurs d'emploi.",
+  path: "/particuliers",
+});
 
 const formats = [
   {
@@ -36,12 +40,16 @@ const formats = [
 ];
 
 export default function ParticuliersPage() {
+  const offers = offersByAudience("particuliers");
+
   return (
     <>
+      <JsonLd data={coursesJsonLd(offers)} />
       <PageHeader
         eyebrow="Particuliers"
         title="Apprenez l'IA, dès demain"
         subtitle="Que vous soyez indépendant, salarié, en recherche d'emploi ou simplement curieux : devenez autonome avec l'IA, en toute simplicité."
+        breadcrumb={[{ name: "Particuliers", path: "/particuliers" }]}
       >
         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           <ButtonLink href="#offres" size="lg">
@@ -80,6 +88,15 @@ export default function ParticuliersPage() {
             );
           })}
         </div>
+        <Reveal className="mt-10 text-center">
+          <p className="text-sm text-white/50">
+            Vous voulez commencer précisément par{" "}
+            <Link href="/formations/chatgpt" className="text-brand-400 underline-offset-4 hover:underline">
+              apprendre ChatGPT
+            </Link>{" "}
+            ? C&apos;est justement le cœur de nos formations.
+          </p>
+        </Reveal>
       </Section>
 
       {/* Formats */}

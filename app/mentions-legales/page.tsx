@@ -1,18 +1,22 @@
-import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/ui/section";
 import { site } from "@/lib/site";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Mentions légales",
   description: "Mentions légales du site Académie IA.",
-  robots: { index: false, follow: true },
-};
+  path: "/mentions-legales",
+  noIndex: true,
+});
 
 export default function MentionsLegalesPage() {
   return (
     <>
-      <PageHeader title="Mentions légales" />
+      <PageHeader
+        title="Mentions légales"
+        breadcrumb={[{ name: "Mentions légales", path: "/mentions-legales" }]}
+      />
       <Section>
         <div className="mx-auto max-w-3xl space-y-8 text-white/70">
           <div>

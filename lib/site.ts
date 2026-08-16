@@ -11,7 +11,10 @@ export const site = {
   slogan: "L'intelligence artificielle, enfin utile à votre métier.",
   baseline:
     "Passez de « l'IA c'est flou » à « je l'utilise dès demain ». Des formations 100 % personnalisées à votre métier.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://academie-ia.fr",
+  // Domaine réel de production (académie-ia.com, forme Punycode car le "é"
+  // n'est pas un caractère ASCII). Surchargeable via NEXT_PUBLIC_SITE_URL —
+  // vérifiez que cette variable est bien définie sur Vercel avec la même valeur.
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://xn--acadmie-ia-e7a.com",
 
   // --- Coordonnées ----------------------------------------------------------
   contact: {
@@ -38,6 +41,7 @@ export const site = {
 export const navLinks = [
   { href: "/entreprises", label: "Entreprises" },
   { href: "/particuliers", label: "Particuliers" },
+  { href: "/formations", label: "Formations" },
   { href: "/tarifs", label: "Tarifs" },
   { href: "/avis", label: "Avis" },
   { href: "/a-propos", label: "À propos" },

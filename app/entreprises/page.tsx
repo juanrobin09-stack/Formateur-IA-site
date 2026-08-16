@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowRight,
   Clock,
@@ -13,13 +13,17 @@ import { OffersGrid } from "@/components/offers-grid";
 import { ButtonLink } from "@/components/ui/button";
 import { FinalCta } from "@/components/sections/cta";
 import { StepsSection } from "@/components/sections/steps";
+import { JsonLd } from "@/components/seo/json-ld";
 import { sectorUseCases } from "@/lib/content";
+import { offersByAudience } from "@/lib/offers";
+import { pageMetadata, coursesJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Formations IA pour entreprises",
+export const metadata = pageMetadata({
+  title: "Formation IA pour entreprises : équipes formées à l'intelligence artificielle",
   description:
-    "Formez vos équipes à l'IA générative. Programmes sur-mesure par métier. Immobilier, restauration, BTP, artisans, commerce, professions libérales.",
-};
+    "Formez vos équipes à l'IA générative avec un programme sur-mesure par métier : immobilier, restauration, BTP, artisans, commerce, professions libérales. Devis sous 24 h.",
+  path: "/entreprises",
+});
 
 const benefits = [
   {
@@ -49,12 +53,16 @@ const benefits = [
 ];
 
 export default function EntreprisesPage() {
+  const offers = offersByAudience("entreprises");
+
   return (
     <>
+      <JsonLd data={coursesJsonLd(offers)} />
       <PageHeader
         eyebrow="Entreprises & PME"
         title="L'IA au service de votre entreprise"
         subtitle="Des formations concrètes et personnalisées pour rendre vos équipes autonomes sur l'IA générative — et gagner un temps précieux."
+        breadcrumb={[{ name: "Entreprises", path: "/entreprises" }]}
       >
         <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
           <ButtonLink href="/contact" size="lg">
@@ -136,6 +144,15 @@ export default function EntreprisesPage() {
             );
           })}
         </div>
+        <Reveal className="mt-10 text-center">
+          <p className="text-sm text-white/50">
+            Vos équipes seront notamment formées à{" "}
+            <Link href="/formations/chatgpt" className="text-brand-400 underline-offset-4 hover:underline">
+              ChatGPT
+            </Link>
+            , l&apos;outil IA le plus utilisé en entreprise aujourd&apos;hui.
+          </p>
+        </Reveal>
       </Section>
 
       <StepsSection />

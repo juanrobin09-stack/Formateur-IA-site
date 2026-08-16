@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
@@ -137,14 +138,24 @@ export function Hero() {
             On vous forme sur les meilleurs outils
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2.5">
-            {aiTools.map((tool) => (
-              <span
-                key={tool}
-                className="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-white/60 backdrop-blur-sm transition-colors hover:border-brand-500/40 hover:text-white sm:text-sm"
-              >
-                {tool}
-              </span>
-            ))}
+            {aiTools.map((tool) =>
+              tool === "ChatGPT" ? (
+                <Link
+                  key={tool}
+                  href="/formations/chatgpt"
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-white/60 backdrop-blur-sm transition-colors hover:border-brand-500/40 hover:text-white sm:text-sm"
+                >
+                  {tool}
+                </Link>
+              ) : (
+                <span
+                  key={tool}
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-xs font-medium text-white/60 backdrop-blur-sm transition-colors hover:border-brand-500/40 hover:text-white sm:text-sm"
+                >
+                  {tool}
+                </span>
+              )
+            )}
           </div>
         </motion.div>
       </div>
